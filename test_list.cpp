@@ -16,38 +16,22 @@
 //     return 0;
 // }
 
-bool compare_nocase (const std::string& first, const std::string& second)
-{
-  unsigned int i=0;
-  while ( (i<first.length()) && (i<second.length()) )
-  {
-    if (tolower(first[i])<tolower(second[i])) return true;
-    else if (tolower(first[i])>tolower(second[i])) return false;
-    ++i;
-  }
-  return ( first.length() < second.length() );
-}
 
 int main ()
 {
-  ft::list<std::string> mylist;
-  ft::list<std::string>::iterator it;
-  mylist.push_back ("one");
-  mylist.push_back ("two");
-  mylist.push_back ("Three");
+  ft::list<int> mylist;
 
-  mylist.sort();
+  // set some initial content:
+  for (int i=1; i<10; ++i) mylist.push_back(i);
 
-  std::cout << "mylist contains:";
-  for (it=mylist.begin(); it!=mylist.end(); ++it)
-    std::cout << ' ' << *it;
-  std::cout << '\n';
-
-  mylist.sort(compare_nocase);
+  mylist.resize(5);
+  mylist.resize(8,100);
+  mylist.resize(12);
 
   std::cout << "mylist contains:";
-  for (it=mylist.begin(); it!=mylist.end(); ++it)
+  for (ft::list<int>::iterator it=mylist.begin(); it!=mylist.end(); ++it)
     std::cout << ' ' << *it;
+
   std::cout << '\n';
 
   return 0;

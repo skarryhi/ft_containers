@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/skarry/Projects/ft_containers/list.hpp
+iostream
+-
+memory
+-
+iterator
+-
+
+/Users/skarry/Projects/ft_containers/test_list.cpp
+list.hpp
+/Users/skarry/Projects/ft_containers/list.hpp
+iostream
+-
+vector
+-
+

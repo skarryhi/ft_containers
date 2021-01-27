@@ -235,13 +235,13 @@ namespace ft {
         void splice (iterator position, list& x, iterator i) {
             (void)x;
             t_list *posList = position.getElement();
-            t_list *changList = i.getElement();
-            changList->next->prev = changList->prev;
-            changList->prev->next = changList->next;
-            changList->next = posList;
-            changList->prev = posList->prev;
-            changList->next->prev = changList;
-            changList->prev->next = changList;
+            t_list *changeList = i.getElement();
+            changeList->next->prev = changeList->prev;
+            changeList->prev->next = changeList->next;
+            changeList->next = posList;
+            changeList->prev = posList->prev;
+            changeList->next->prev = changeList;
+            changeList->prev->next = changeList;
         }
 
         void splice (iterator position, list& x, iterator first, iterator last) {
@@ -300,15 +300,19 @@ namespace ft {
             size_t size(this->size());
             t_list *tmp(begin().getElement());
             t_list *tmpNext(tmp->next);
-            while (size--) {
-                if (*tmp->content > *tmpNext->content) {
-                    swapList(tmp, tmpNext);
-                    tmp = tmpNext->next;
-                    tmpNext = tmp->next;
-                }
-                else {
-                    tmp = tmp->next;
-                    tmpNext = tmpNext->next;
+            while (--size) {
+                tmp = begin().getElement();
+                tmpNext = tmp->next;
+                while (tmp->next != end().getElement()) {
+                    if (*tmp->content > *tmpNext->content) {
+                        swapList(tmp, tmpNext);
+                        tmp = tmpNext->next;
+                        tmpNext = tmp->next;
+                    }
+                    else {
+                        tmp = tmp->next;
+                        tmpNext = tmpNext->next;
+                    }
                 }
             }
         }
@@ -318,15 +322,38 @@ namespace ft {
             size_t size(this->size());
             t_list *tmp(begin().getElement());
             t_list *tmpNext(tmp->next);
+            while (--size) {
+                tmp = begin().getElement();
+                tmpNext = tmp->next;
+                while (tmp->next != end().getElement()) {
+                    if (!comp(*tmp->content, *tmpNext->content)) {
+                        swapList(tmp, tmpNext);
+                        tmp = tmpNext->next;
+                        tmpNext = tmp->next;
+                    }
+                    else {
+                        tmp = tmp->next;
+                        tmpNext = tmpNext->next;
+                    }
+                }
+            }
+        }
+
+        void reverse() {
+            size_t size(this->size() / 2);
+            t_list *first(begin().getElement());
+            t_list *second(end().getElement()->prev);
+            int flag(1);
             while (size--) {
-                if (comp(*tmp->content, *tmpNext->content)) {
-                    swapList(tmp, tmpNext);
-                    tmp = tmpNext->next;
-                    tmpNext = tmp->next;
+                swapList(first, second);
+                if (flag--) {
+                    second = second->next;
+                    first = first->prev;
                 }
                 else {
-                    tmp = tmp->next;
-                    tmpNext = tmpNext->next;
+                    second = second->prev;
+                    first = first->next;
+                    flag++;
                 }
             }
         }
@@ -602,13 +629,29 @@ namespace ft {
         }
 
         void    swapList(t_list *x, t_list *y) {
-            y->next->prev = x;
-            y->prev = x->prev;
-            x->prev->next = y;
-            x->prev = y;
-            x->next = y->next;
-            y->next = x;
+            t_list *left(x->next);
+            t_list *right(y->prev);
+            if (left == y) {
+                y->next->prev = x;
+                y->prev = x->prev;
+                x->prev->next = y;
+                x->next = y->next;
+                x->prev = y;
+                y->next = x;
+            }
+            else {
+                y->next->prev = x;
+                y->prev = x->prev;
+                x->prev->next = y;
+                x->next = y->next;
+                x->prev = right;
+                y->next = left;
+                right->next = x;
+                left->prev = y;
+            }
         }
+        
+            
     };
 }
 
