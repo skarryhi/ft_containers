@@ -286,10 +286,42 @@ namespace ft {
             }
         }
 
-        void unique();
+        void unique() {
+            t_list *first(begin().getElement());
+            t_list *second(end().getElement());
+            t_list *tmp;
+            while (first != second) {
+                tmp = first->next;
+                while (tmp != second) {
+                    if (*first->content == *tmp->content) {
+                        tmp = tmp->next;
+                        erase(iterator(tmp->prev));
+                    }
+                    else
+                        tmp = tmp->next;
+                }
+                first = first->next;
+            }
+        }
 
         template <class BinaryPredicate>
-        void unique (BinaryPredicate binary_pred);
+        void unique (BinaryPredicate binary_pred) {
+            t_list *first(begin().getElement());
+            t_list *second(end().getElement());
+            t_list *tmp;
+            while (first != second) {
+                tmp = first->next;
+                while (tmp != second) {
+                    if (binary_pred(*first->content, *tmp->content)) {
+                        tmp = tmp->next;
+                        erase(iterator(tmp->prev));
+                    }
+                    else
+                        tmp = tmp->next;
+                }
+                first = first->next;
+            }
+        }
 
         void merge (list& x);
 
