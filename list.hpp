@@ -262,8 +262,8 @@ namespace ft {
         }
 
         void remove (const value_type& val) {
-            t_list *tmp(begin().getElement());
-            t_list *endNoda(end().getElement());
+            t_list *tmp(_end->next);
+            t_list *endNoda(_end);
             t_list *reservNoda;
             while (tmp != endNoda) {
                 reservNoda = tmp->next;
@@ -275,8 +275,8 @@ namespace ft {
 
         template <class Predicate>
         void remove_if (Predicate pred) {
-            t_list *tmp(begin().getElement());
-            t_list *endNoda(end().getElement());
+            t_list *tmp(_end->next);
+            t_list *endNoda(_end);
             t_list *reservNoda;
             while (tmp != endNoda) {
                 reservNoda = tmp->next;
@@ -287,8 +287,8 @@ namespace ft {
         }
 
         void unique() {
-            t_list *first(begin().getElement());
-            t_list *second(end().getElement());
+            t_list *first(_end->next);
+            t_list *second(_end);
             t_list *tmp;
             while (first != second) {
                 tmp = first->next;
@@ -306,8 +306,8 @@ namespace ft {
 
         template <class BinaryPredicate>
         void unique (BinaryPredicate binary_pred) {
-            t_list *first(begin().getElement());
-            t_list *second(end().getElement());
+            t_list *first(_end->next);
+            t_list *second(_end);
             t_list *tmp;
             while (first != second) {
                 tmp = first->next;
@@ -323,19 +323,43 @@ namespace ft {
             }
         }
 
-        void merge (list& x);
+        void merge (list& x) {
+            t_list *first(_end->next);
+            t_list *xfirst(x._end->next);
+            if (&x != this) {
+                while (xfirst != x._end) {
+                    if (first == _end || *first->content > *xfirst->content)
+                        splice(iterator(first), *this, iterator(xfirst));
+                    else
+                        first = first->next;
+                    xfirst = x._end->next;
+                }
+            }
+        }
 
         template <class Compare>
-        void merge (list& x, Compare comp);
+        void merge (list& x, Compare comp) {
+            t_list *first(_end->next);
+            t_list *xfirst(x._end->next);
+            if (&x != this) {
+                while (xfirst != x._end) {
+                    if (first == _end || !comp(*first->content, *xfirst->content))
+                        splice(iterator(first), *this, iterator(xfirst));
+                    else
+                        first = first->next;
+                    xfirst = x._end->next;
+                }
+            }
+        }
 
         void sort() {
             size_t size(this->size());
-            t_list *tmp(begin().getElement());
+            t_list *tmp(_end->next);
             t_list *tmpNext(tmp->next);
             while (--size) {
-                tmp = begin().getElement();
+                tmp = _end->next;
                 tmpNext = tmp->next;
-                while (tmp->next != end().getElement()) {
+                while (tmp->next != _end) {
                     if (*tmp->content > *tmpNext->content) {
                         swapList(tmp, tmpNext);
                         tmp = tmpNext->next;
@@ -352,12 +376,12 @@ namespace ft {
         template <class Compare>
         void sort (Compare comp) {
             size_t size(this->size());
-            t_list *tmp(begin().getElement());
+            t_list *tmp(_end->next);
             t_list *tmpNext(tmp->next);
             while (--size) {
-                tmp = begin().getElement();
+                tmp = _end->next;
                 tmpNext = tmp->next;
-                while (tmp->next != end().getElement()) {
+                while (tmp->next != _end) {
                     if (!comp(*tmp->content, *tmpNext->content)) {
                         swapList(tmp, tmpNext);
                         tmp = tmpNext->next;
@@ -373,8 +397,8 @@ namespace ft {
 
         void reverse() {
             size_t size(this->size() / 2);
-            t_list *first(begin().getElement());
-            t_list *second(end().getElement()->prev);
+            t_list *first(_end->next);
+            t_list *second(_end->prev);
             int flag(1);
             while (size--) {
                 swapList(first, second);
@@ -685,6 +709,32 @@ namespace ft {
         
             
     };
+
+    template <class T, class Alloc>
+    void swap (list<T,Alloc>& x, list<T,Alloc>& y) {
+        list<T,Alloc> z(x);
+        x = y;
+        y = z;
+    }
+
+    template <class T, class Alloc>
+    bool operator== (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() == rhs.size();}
+    
+    template <class T, class Alloc>
+    bool operator!= (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() != rhs.size();}
+    
+    template <class T, class Alloc>
+    bool operator<  (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() < rhs.size();}
+    
+    template <class T, class Alloc>
+    bool operator<= (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() <= rhs.size();}
+    
+    template <class T, class Alloc>
+    bool operator>  (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() > rhs.size();}
+    
+    template <class T, class Alloc>
+    bool operator>= (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() >= rhs.size();}
 }
+
 
 #endif
