@@ -59,7 +59,7 @@ namespace ft {
             }
         }
 
-        list& operator= (const list& x) {
+        list& operator=(const list& x) {
             clear();
             iterator temp(x.begin());
             iterator endList(x.end());
@@ -192,9 +192,7 @@ namespace ft {
             }
         }
 
-        void clear() {
-            erase(this->begin(), this->end());
-        }
+        void clear() {erase(this->begin(), this->end());}
 
         //Capacity
         bool empty() const {return !_size;}
@@ -263,26 +261,26 @@ namespace ft {
 
         void remove (const value_type& val) {
             t_list *tmp(_end->next);
-            t_list *endNoda(_end);
-            t_list *reservNoda;
-            while (tmp != endNoda) {
-                reservNoda = tmp->next;
+            t_list *endz(_end);
+            t_list *reservNode;
+            while (tmp != endNode) {
+                reservNode = tmp->next;
                 if (*tmp->content == val)
                     erase(iterator(tmp));
-                tmp = reservNoda;
+                tmp = reservNode;
             }
         }
 
         template <class Predicate>
         void remove_if (Predicate pred) {
             t_list *tmp(_end->next);
-            t_list *endNoda(_end);
-            t_list *reservNoda;
-            while (tmp != endNoda) {
-                reservNoda = tmp->next;
+            t_list *endNode(_end);
+            t_list *reservNode;
+            while (tmp != endNode) {
+                reservNode = tmp->next;
                 if (pred(*tmp->content))
                     erase(iterator(tmp));
-                tmp = reservNoda;
+                tmp = reservNode;
             }
         }
 
@@ -427,6 +425,51 @@ namespace ft {
         allocator_type          _alloc;
         size_type               _size;
         t_list                  *_end;
+        //utils
+        void    startList() {
+            _end = _allocator_rebind.allocate(1);
+            _end->content = _alloc.allocate(1);
+            _end->next = _end;
+            _end->prev = _end;
+        }
+
+        t_list  *newContentList(const value_type& val) {
+            t_list  *newList = _allocator_rebind.allocate(1);
+            newList->content = _alloc.allocate(1);
+            _alloc.construct(newList->content, val);
+            ++_size;
+            return newList;
+        }
+
+        void    deleteList(t_list* const oldList) {
+            _alloc.destroy(oldList->content);
+            _alloc.deallocate(oldList->content, 1);
+            _allocator_rebind.deallocate(oldList, 1);
+            --_size;
+        }
+
+        void    swapList(t_list *x, t_list *y) {
+            t_list *left(x->next);
+            t_list *right(y->prev);
+            if (left == y) {
+                y->next->prev = x;
+                y->prev = x->prev;
+                x->prev->next = y;
+                x->next = y->next;
+                x->prev = y;
+                y->next = x;
+            }
+            else {
+                y->next->prev = x;
+                y->prev = x->prev;
+                x->prev->next = y;
+                x->next = y->next;
+                x->prev = right;
+                y->next = left;
+                right->next = x;
+                left->prev = y;
+            }
+        }
 
     public:
         //iterators
@@ -606,6 +649,7 @@ namespace ft {
         class const_reverse_iterator : public std::reverse_iterator<iterator> {
         private:
             t_list  *_element;
+
         public:
 
             explicit const_reverse_iterator(t_list *pointer = nullptr) : _element(pointer) {}
@@ -661,51 +705,7 @@ namespace ft {
         const_reverse_iterator rbegin() const {return(const_reverse_iterator(++_end));}
         const_reverse_iterator rend() const {return(const_reverse_iterator(--_end));}
 
-        //utils
-        void    startList() {
-            _end = _allocator_rebind.allocate(1);
-            _end->content = _alloc.allocate(1);
-            _end->next = _end;
-            _end->prev = _end;
-        }
 
-        t_list  *newContentList(const value_type& val) {
-            t_list  *newList = _allocator_rebind.allocate(1);
-            newList->content = _alloc.allocate(1);
-            _alloc.construct(newList->content, val);
-            ++_size;
-            return newList;
-        }
-
-        void    deleteList(t_list* const oldList) {
-            _alloc.destroy(oldList->content);
-            _alloc.deallocate(oldList->content, 1);
-            _allocator_rebind.deallocate(oldList, 1);
-            --_size;
-        }
-
-        void    swapList(t_list *x, t_list *y) {
-            t_list *left(x->next);
-            t_list *right(y->prev);
-            if (left == y) {
-                y->next->prev = x;
-                y->prev = x->prev;
-                x->prev->next = y;
-                x->next = y->next;
-                x->prev = y;
-                y->next = x;
-            }
-            else {
-                y->next->prev = x;
-                y->prev = x->prev;
-                x->prev->next = y;
-                x->next = y->next;
-                x->prev = right;
-                y->next = left;
-                right->next = x;
-                left->prev = y;
-            }
-        }
         
             
     };

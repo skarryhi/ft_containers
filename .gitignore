@@ -1,3 +1,6 @@
 a.out.dSYM
 .vscode
 a.out
+CMakeLists.txt
+cmake-build-debug
+.dist
