@@ -263,7 +263,7 @@ namespace ft {
             t_list *tmp(_end->next);
             t_list *endz(_end);
             t_list *reservNode;
-            while (tmp != endNode) {
+            while (tmp != endz) {
                 reservNode = tmp->next;
                 if (*tmp->content == val)
                     erase(iterator(tmp));
