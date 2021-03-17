@@ -72,6 +72,7 @@ namespace ft {
             if (_capacity)
                 _alloc.deallocate(_vector, _capacity);
             _capacity = need;
+//            value_type  *swapArr = newArr;
             _vector = newArr;
         }
 
@@ -91,8 +92,8 @@ namespace ft {
             _size -= position_end - position_start + 1;
         }
 
-        size_type getPosition(iterator position) {
-            iterator it = this->begin();
+        size_type getPosition(iterator const& position) {
+            iterator it = begin();
             size_type start = 0;
             while (it != this->end()) {
                 if (it == position)
@@ -148,7 +149,7 @@ namespace ft {
         void resize (size_type n, value_type val = value_type()) {
             if (n > _size) {
                 while (n > _capacity)
-                    reallocArr();
+                    reserveCapacity(_size * 2);
                 while (_size < n)
                     addElem(val);
             }
@@ -204,7 +205,7 @@ namespace ft {
         void assign (InputIterator first, InputIterator last, typename enable_if<std::__is_input_iterator<InputIterator>::value>::type* = 0) {
             deleteElem(0, size() - 1);
             while (first != last) {
-                if (_size == _capacity)
+                if (_size + 1 > _capacity)
                     reserveCapacity(_size + 1);
                 addElem(*first);
                 ++first;
@@ -214,7 +215,7 @@ namespace ft {
         void assign (size_type n, const value_type& val) {
             deleteElem(0, size() - 1);
             while (n > 0) {
-                if (_size == _capacity)
+                if (_size + 1 > _capacity)
                     reserveCapacity(_size + 1);
                 addElem(val);
                 --n;
@@ -222,8 +223,12 @@ namespace ft {
         }
 
         void push_back (const value_type& val) {
-            if (_size + 1 > _capacity)
-                reallocArr();
+            if (_size + 1 > _capacity) {
+                if (_capacity == 0)
+                    reserveCapacity(1);
+                else
+                    reserveCapacity(_size * 2);
+            }
             addElem(val);
         }
 
@@ -233,7 +238,7 @@ namespace ft {
 
         iterator insert (iterator position, const value_type& val) {
             if (_size == _capacity)
-                reserveCapacity(_size * 2);
+                reserveCapacity(_size + 1);
             size_type pos = getPosition(position);
             for (size_type i = 0; i < _size; i++) {
                 if (i == pos) {
@@ -250,12 +255,22 @@ namespace ft {
         }
 
         void insert (iterator position, size_type n, const value_type& val) {
-
+            while (n != 0) {
+                position = insert(position, val);
+                --n;
+            }
         }
 
         template <class InputIterator>
-        void insert (iterator position, InputIterator first, InputIterator last) {
-
+        void insert (iterator position, InputIterator first, InputIterator last, typename enable_if<std::__is_input_iterator<InputIterator>::value>::type* = 0) {
+            if (first == last)
+                return;
+            --last;
+            while (first != last) {
+                insert(position, *last);
+                --last;
+            }
+            insert(position, *first);
         }
 
         iterator erase (iterator position) {
@@ -283,7 +298,7 @@ namespace ft {
 
     public:
         //iterators
-        class iterator : public std::iterator<std::bidirectional_iterator_tag, value_type> {
+        class iterator : public std::iterator<std::random_access_iterator_tag, value_type> {
         private:
             value_type              *_element;
         public:
@@ -325,7 +340,7 @@ namespace ft {
         iterator end() {return(iterator(_vector + _size));}
 
 
-        class const_iterator : public std::iterator<std::bidirectional_iterator_tag, const value_type> {
+        class const_iterator : public std::iterator<std::random_access_iterator_tag, const value_type> {
         private:
             value_type              *_element;
         public:
@@ -369,7 +384,7 @@ namespace ft {
         const_iterator end() const {return(iterator(*(_vector + _size)));}
 
 
-        class reverse_iterator :  public std::iterator<std::input_iterator_tag, value_type> {
+        class reverse_iterator :  public std::reverse_iterator<iterator> {
         private:
             value_type              *_element;
         public:
@@ -381,26 +396,10 @@ namespace ft {
 
             reverse_iterator&   operator--() {_element += 1; return *this;}
             reverse_iterator&   operator++() { _element -= 1; return *this;}
-            reverse_iterator  operator--(int) {reverse_iterator temp(_element); operator--(); return temp;}
-            reverse_iterator  operator++(int) {reverse_iterator temp(_element); operator++(); return temp;}
             reverse_iterator  operator+(difference_type val) const {return reverse_iterator(_element - val);}
             reverse_iterator  operator-(difference_type val) const {return reverse_iterator(_element + val);}
             reverse_iterator  operator+=(difference_type val) {return reverse_iterator(_element -= val);}
             reverse_iterator  operator-=(difference_type val) {return reverse_iterator(_element += val);}
-
-            bool        operator==(reverse_iterator const& other) const {return _element == other._element;}
-            bool        operator!=(reverse_iterator const& other) const {return _element != other._element;}
-            bool        operator>(reverse_iterator const& other) const {return _element > other._element;}
-            bool        operator>=(reverse_iterator const& other) const {return _element >= other._element;}
-            bool        operator<(reverse_iterator const& other) const {return _element < other._element;}
-            bool        operator<=(reverse_iterator const& other) const {return _element <= other._element;}
-
-            bool        operator==(const_reverse_iterator const& other) const {return _element == other.getElement();}
-            bool        operator!=(const_reverse_iterator const& other) const {return _element != other.getElement();}
-            bool        operator>(const_reverse_iterator const& other) const {return _element > other.getElement();}
-            bool        operator>=(const_reverse_iterator const& other) const {return _element >= other.getElement();}
-            bool        operator<(const_reverse_iterator const& other) const {return _element < other.getElement();}
-            bool        operator<=(const_reverse_iterator const& other) const {return _element <= other.getElement();}
 
             const_reference operator[](const_reference val) const {return _element[val];}
             value_type&	operator*() const {return *_element;}
@@ -411,7 +410,7 @@ namespace ft {
         reverse_iterator rend() {return(reverse_iterator((_vector - 1)));}
 
 
-        class const_reverse_iterator : public std::iterator<std::bidirectional_iterator_tag, const value_type> {
+        class const_reverse_iterator : public std::reverse_iterator<iterator> {
         private:
             value_type              *_element;
         public:
@@ -423,24 +422,8 @@ namespace ft {
             const_reverse_iterator(reverse_iterator const& other) {*this = other;}
             ~const_reverse_iterator() {}
 
-            bool        operator==(reverse_iterator const& other) const {return _element == other.getElement();}
-            bool        operator!=(reverse_iterator const& other) const {return _element != other.getElement();}
-            bool        operator>(reverse_iterator const& other) const {return _element > other.getElement();}
-            bool        operator>=(reverse_iterator const& other) const {return _element >= other.getElement();}
-            bool        operator<(reverse_iterator const& other) const {return _element < other.getElement();}
-            bool        operator<=(reverse_iterator const& other) const {return _element <= other.getElement();}
-
-            bool        operator==(const_reverse_iterator const& other) const {return _element == other._element;}
-            bool        operator!=(const_reverse_iterator const& other) const {return _element != other._element;}
-            bool        operator>(const_reverse_iterator const& other) const {return _element > other._element;}
-            bool        operator>=(const_reverse_iterator const& other) const {return _element >= other._element;}
-            bool        operator<(const_reverse_iterator const& other) const {return _element < other._element;}
-            bool        operator<=(const_reverse_iterator const& other) const {return _element <= other._element;}
-
             const_reverse_iterator&   operator--() {_element += 1; return *this;}
             const_reverse_iterator&   operator++() { _element -= 1; return *this;}
-            const_reverse_iterator  operator--(int) {const_reverse_iterator temp(_element); operator--(); return temp;}
-            const_reverse_iterator  operator++(int) {const_reverse_iterator temp(_element); operator++(); return temp;}
             const_reverse_iterator  operator+(difference_type val) const {return const_reverse_iterator(_element - val);}
             const_reverse_iterator  operator-(difference_type val) const {return const_reverse_iterator(_element + val);}
             const_reverse_iterator  operator+=(difference_type val) {return const_reverse_iterator(_element -= val);}
