@@ -61,7 +61,7 @@ TEST(ConstructorIterators, Vector) {
 
 TEST(OperatorEquals, Vector) {
     ft::vector<int> my_vector(5, 8);
-    ft::vector<int> my_vector2 = my_vector; //hear
+    ft::vector<int> my_vector2 = my_vector;
 
     for (size_t i = 0; i < 5; i++)
         ASSERT_EQ(my_vector[i], my_vector2[i]);
@@ -69,7 +69,7 @@ TEST(OperatorEquals, Vector) {
     ASSERT_EQ(my_vector[2], 7);
 
     std::vector<int> def_vector(5, 8);
-    std::vector<int> def_vector2 = def_vector; //hear
+    std::vector<int> def_vector2 = def_vector;
 
     for (size_t i = 0; i < 5; i++)
         ASSERT_EQ(def_vector[i], def_vector2[i]);
@@ -321,6 +321,7 @@ TEST(Erase, Vector) {
 
     myvector.erase (myvector.begin(),myvector.begin()+3);
     defvector.erase (defvector.begin(),defvector.begin()+3);
+    for (int i=0; i<defvector.size(); i++) ASSERT_EQ(myvector[i], defvector[i]);;
     ASSERT_EQ(myvector.size(), defvector.size());
     ASSERT_EQ(myvector.capacity(), defvector.capacity());
 
@@ -328,8 +329,8 @@ TEST(Erase, Vector) {
     defvector.erase (defvector.begin()+3);
     ASSERT_EQ(myvector.size(), defvector.size());
     ASSERT_EQ(myvector.capacity(), defvector.capacity());
-
     for (int i=0; i<defvector.size(); i++) ASSERT_EQ(myvector[i], defvector[i]);;
+
 }
 
 TEST(Swap, Vector) {

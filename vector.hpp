@@ -51,18 +51,6 @@ namespace ft {
             ++_size;
         }
 
-        void        reallocArr() {
-            value_type  *newArr = _alloc.allocate(_size * 2);
-            for (size_type i = 0; i < _size;  i++)
-                _alloc.construct(newArr + i, *(_vector + i));
-            for (size_type i = 0; i < _size;  i++)
-                _alloc.destroy(_vector + i);
-            if (_capacity)
-                _alloc.deallocate(_vector, _capacity);
-            _capacity = _size * 2;
-            _vector = newArr;
-        }
-
         void        reserveCapacity(size_type need) {
             value_type  *newArr = _alloc.allocate(need);
             for (size_type i = 0; i < _size;  i++)
@@ -72,24 +60,24 @@ namespace ft {
             if (_capacity)
                 _alloc.deallocate(_vector, _capacity);
             _capacity = need;
-//            value_type  *swapArr = newArr;
             _vector = newArr;
         }
 
         void    deleteElem(size_type position_start, size_type position_end) {
-            value_type  *newArr = _alloc.allocate(_capacity);
-            for (size_type j = 0, i = 0; i < _size;  i++) {
-                if (i < position_start || i > position_end) {
-                    _alloc.construct(newArr + j, *(_vector + i));
-                    ++j;
+            _size -= position_end - position_start + 1;
+            for (size_type i = 0; i < _size;  i++) {
+                if (i >= position_start && i <= position_end) {
+                    _alloc.destroy(_vector + i);
+                    if ((i + position_end - position_start + 1) < _size) {
+                        _alloc.construct(_vector + i, *(_vector + (i + position_end - position_start + 1)));
+                        _alloc.destroy(_vector + (i + position_end - position_start + 1));
+                    }
+                }
+                if (i > position_end) {
+                    _alloc.construct(_vector + i, *(_vector + (i + position_end - position_start + 1)));
+                    _alloc.destroy(_vector + (i + position_end - position_start + 1));
                 }
             }
-            for (size_type i = 0; i < _size;  i++)
-                _alloc.destroy(_vector + i);
-            if (_capacity)
-                _alloc.deallocate(_vector, _capacity);
-            _vector = newArr;
-            _size -= position_end - position_start + 1;
         }
 
         size_type getPosition(iterator const& position) {
