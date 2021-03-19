@@ -2,12 +2,12 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="ft_containers" targetName="vector" />
+      <config projectName="ft_containers" targetName="runEngineUnitTests" />
       <config projectName="ft_containers" targetName="ft_containers" />
       <config projectName="ft_containers" targetName="gmock" />
       <config projectName="ft_containers" targetName="gtest_main" />
-      <config projectName="ft_containers" targetName="gmock_main" />
       <config projectName="ft_containers" targetName="gtest" />
+      <config projectName="ft_containers" targetName="gmock_main" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -17,9 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d09e3c5-37e5-4e7e-a151-672acae506cd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/vector.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vector_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/vector_test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +29,13 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -42,13 +48,16 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="1nhhJ3RFbUq3CFTW7e4tKpypt8X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.advertisement.text.has.clang-format" value="true" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="ctest.advertisement.all.test.configuration.is.created" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -60,7 +69,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Google Test.Insert.Vector">
+  <component name="RunManager" selected="Google Test.runVector">
+    <configuration name="ConstructorEmpty.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="Vector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="Vector" TEST_CLASS="ConstructorEmpty" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Erase.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="vector" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="vector" TEST_CLASS="Erase" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -68,12 +83,6 @@
       </method>
     </configuration>
     <configuration name="Insert.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="vector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="vector" TEST_CLASS="Insert" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Iterator.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="vector" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="vector" TEST_CLASS="Iterator" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -91,38 +100,18 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="vector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="vector" TEST_MODE="SUITE_TEST">
+    <configuration name="runVector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runVector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runVector" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ft_containers" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="ft_containers" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="ft_containers">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="gmock" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="gtest" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$CMakeCurrentGenerationDir$" PASS_PARENT_ENVS_2="true" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" WORKING_DIR="file://$CMakeCurrentGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -134,26 +123,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.ft_containers" />
-      <item itemvalue="CMake Application.gmock" />
-      <item itemvalue="CMake Application.gmock_main" />
-      <item itemvalue="CMake Application.gtest" />
-      <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CTest Application.All CTest" />
-      <item itemvalue="Google Test.vector" />
+      <item itemvalue="Google Test.runVector" />
       <item itemvalue="Google Test.Erase.Vector" />
       <item itemvalue="Google Test.Insert.Vector" />
-      <item itemvalue="Google Test.Iterator.Vector" />
       <item itemvalue="Google Test.Push_back.Vector" />
       <item itemvalue="Google Test.Resize.Vector" />
+      <item itemvalue="Google Test.ConstructorEmpty.Vector" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.ConstructorEmpty.Vector" />
         <item itemvalue="Google Test.Insert.Vector" />
         <item itemvalue="Google Test.Push_back.Vector" />
         <item itemvalue="Google Test.Resize.Vector" />
         <item itemvalue="Google Test.Erase.Vector" />
-        <item itemvalue="Google Test.Iterator.Vector" />
       </list>
     </recent_temporary>
   </component>
@@ -191,6 +175,7 @@
       <workItem from="1615823062937" duration="4635000" />
       <workItem from="1615885259720" duration="15000" />
       <workItem from="1615978568179" duration="2315000" />
+      <workItem from="1616157726517" duration="2677000" />
     </task>
     <servers />
   </component>
