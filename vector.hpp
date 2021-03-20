@@ -450,6 +450,31 @@ namespace ft {
         const_reverse_iterator rbegin() const {return(const_reverse_iterator(*(_vector + _size - 1)));}
         const_reverse_iterator rend() const {return(const_reverse_iterator(*(_vector - 1)));}
     };
+
+    template <class T, class Alloc>
+    void swap (vector<T,Alloc>& x, vector<T,Alloc>& y) {
+        vector<T,Alloc> z(x);
+        x = y;
+        y = z;
+    }
+
+    template <class T, class Alloc>
+    bool operator== (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() == rhs.size();}
+
+    template <class T, class Alloc>
+    bool operator!= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() != rhs.size();}
+
+    template <class T, class Alloc>
+    bool operator<  (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() < rhs.size();}
+
+    template <class T, class Alloc>
+    bool operator<= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() <= rhs.size();}
+
+    template <class T, class Alloc>
+    bool operator>  (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() > rhs.size();}
+
+    template <class T, class Alloc>
+    bool operator>= (const vector<T,Alloc>& lhs, const vector<T,Alloc>& rhs) { return lhs.size() >= rhs.size();}
 }
 
 #endif //FT_CONTAINERS_VECTOR_H

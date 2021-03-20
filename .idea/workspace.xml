@@ -73,13 +73,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Google Test.runVector">
-    <configuration name="ConstructorEmpty.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="Vector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="Vector" TEST_CLASS="ConstructorEmpty" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Google Test.SwapVectors.Vector">
     <configuration name="ConstructorIterators.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runVector" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runVector" TEST_CLASS="ConstructorIterators" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -93,6 +87,12 @@
       </method>
     </configuration>
     <configuration name="Inser.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runVector" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runVector" TEST_CLASS="Inser" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SwapVectors.Vector" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runVector" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runVector" TEST_CLASS="SwapVectors" TEST_METHOD="Vector" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -124,19 +124,19 @@
     <list>
       <item itemvalue="CTest Application.All CTest" />
       <item itemvalue="Google Test.runVector" />
-      <item itemvalue="Google Test.ConstructorEmpty.Vector" />
       <item itemvalue="Google Test.ConstructorIterators.Vector" />
       <item itemvalue="Google Test.Erase.Vector" />
       <item itemvalue="Google Test.Swap.Vector" />
       <item itemvalue="Google Test.Inser.Vector" />
+      <item itemvalue="Google Test.SwapVectors.Vector" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Google Test.SwapVectors.Vector" />
         <item itemvalue="Google Test.Inser.Vector" />
         <item itemvalue="Google Test.Erase.Vector" />
         <item itemvalue="Google Test.Swap.Vector" />
         <item itemvalue="Google Test.ConstructorIterators.Vector" />
-        <item itemvalue="Google Test.ConstructorEmpty.Vector" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +177,7 @@
       <workItem from="1616157726517" duration="3098000" />
       <workItem from="1616162590305" duration="89000" />
       <workItem from="1616162959803" duration="1751000" />
-      <workItem from="1616235537211" duration="451000" />
+      <workItem from="1616235537211" duration="3095000" />
     </task>
     <servers />
   </component>
@@ -185,19 +185,7 @@
     <option name="version" value="3" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/vector_test.cpp</url>
-          <line>304</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
-      <configuration name="CMakeGoogleTestRunConfigurationType">
-        <watch expression="this-&gt;_capacity" />
-      </configuration>
       <configuration name="CMakeRunConfiguration">
         <watch expression="myvector[0]" language="ObjectiveC" />
         <watch expression="myvector[1]" language="ObjectiveC" />

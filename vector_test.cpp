@@ -522,4 +522,34 @@ TEST(ConstReverseIterator, Vector) {
     ASSERT_EQ(ite[0], def_ite[0]);
 }
 
+TEST(SwapVectors, Vector) {
+    std::vector<int> default_vector(3, 100);
+    ft::vector<int> my_vector(3, 100);
+    std::vector<int> default_vector2(5, 200);
+    ft::vector<int> my_vector2(5, 200);
 
+    ft::swap(my_vector, my_vector2);
+    std::swap(default_vector, default_vector2);
+
+    for (size_t i = 0; i < default_vector.size(); i++) {
+        ASSERT_EQ(default_vector[i], my_vector[i]);
+    }
+
+    for (size_t i = 0; i < default_vector2.size(); i++) {
+        ASSERT_EQ(default_vector2[i], my_vector2[i]);
+    }
+}
+
+TEST(RelationalOperators, Vector) {
+    std::vector<int> default_vector(3, 100);
+    ft::vector<int> my_vector(3, 100);
+    std::vector<int> default_vector2(5, 200);
+    ft::vector<int> my_vector2(5, 200);
+
+    ASSERT_EQ((default_vector==default_vector2), (my_vector==my_vector2));
+    ASSERT_EQ((default_vector!=default_vector2), (my_vector!=my_vector2));
+    ASSERT_EQ((default_vector>=default_vector2), (my_vector>=my_vector2));
+    ASSERT_EQ((default_vector<=default_vector2), (my_vector<=my_vector2));
+    ASSERT_EQ((default_vector>default_vector2), (my_vector>my_vector2));
+    ASSERT_EQ((default_vector<default_vector2), (my_vector<my_vector2));
+}
