@@ -270,47 +270,47 @@ TEST(Pop_back, Vector) {
 
 }
 
-//TEST(Insert, Vector) {
-//    ft::vector<int> my_vector;
-//    std::vector<int> def_vector;
-//
-//    for (int i=1; i<=10; i++) my_vector.push_back(i);
-//    for (int i=1; i<=10; i++) def_vector.push_back(i);
-//
-////    ft::vector<int>::iterator my_it = my_vector.insert (my_vector.begin() + 2, 200 );
-////    std::vector<int>::iterator def_it = def_vector.insert ( def_vector.begin() + 2, 200 );
-////    my_vector.insert (my_it, 200 );
-////    def_vector.insert ( def_it, 200 );
-////    for (size_t i = 0; i < 10; i++) {
-////        ASSERT_EQ(def_vector[i], my_vector[i]);
-////    }
-////    ASSERT_EQ(my_vector.size(), def_vector.size());
-////    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
-////
-////    my_vector.insert (my_vector.begin(),2,300);
-////    def_vector.insert (def_vector.begin(),2,300);
-////    ASSERT_EQ(my_vector.size(), def_vector.size());
-////    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
-////    for (size_t i = 0; i < def_vector.size(); i++) {
-////        ASSERT_EQ(def_vector[i], my_vector[i]);
-////    }
-////
-////    ASSERT_EQ(my_vector.size(), def_vector.size());
-////    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
-//
-//    ft::vector<int> my_vector2;
-//    std::vector<int> def_vector2;
-//
-//    for (int i=1; i<=10; i++) my_vector2.push_back(i);
-//    for (int i=1; i<=10; i++) def_vector2.push_back(i);
-//    my_vector.insert (my_vector.begin(),my_vector2.begin(),my_vector2.end());
-//    def_vector.insert (def_vector.begin(), def_vector2.begin(),def_vector2.end());
-//    for (size_t i = 0; i < def_vector.size(); i++) {
-//        ASSERT_EQ(def_vector[i], my_vector[i]);
-//    }
-//    ASSERT_EQ(my_vector.size(), def_vector.size());
-//    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
-//}
+TEST(Insert, Vector) {
+    ft::vector<int> my_vector;
+    std::vector<int> def_vector;
+
+    for (int i=1; i<=10; i++) my_vector.push_back(i);
+    for (int i=1; i<=10; i++) def_vector.push_back(i);
+
+    ft::vector<int>::iterator my_it = my_vector.insert (my_vector.begin() + 2, 200 );
+    std::vector<int>::iterator def_it = def_vector.insert ( def_vector.begin() + 2, 200 );
+    my_vector.insert (my_it, 200 );
+    def_vector.insert ( def_it, 200 );
+    for (size_t i = 0; i < 10; i++) {
+        ASSERT_EQ(def_vector[i], my_vector[i]);
+    }
+    ASSERT_EQ(my_vector.size(), def_vector.size());
+    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
+
+    my_vector.insert (my_vector.begin(),2,300);
+    def_vector.insert (def_vector.begin(),2,300);
+    ASSERT_EQ(my_vector.size(), def_vector.size());
+    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
+    for (size_t i = 0; i < def_vector.size(); i++) {
+        ASSERT_EQ(def_vector[i], my_vector[i]);
+    }
+
+    ASSERT_EQ(my_vector.size(), def_vector.size());
+    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
+
+    ft::vector<int> my_vector2;
+    std::vector<int> def_vector2;
+
+    for (int i=1; i<=10; i++) my_vector2.push_back(i);
+    for (int i=1; i<=10; i++) def_vector2.push_back(i);
+    my_vector.insert (my_vector.begin(),my_vector2.begin(),my_vector2.end());
+    def_vector.insert (def_vector.begin(), def_vector2.begin(),def_vector2.end());
+    for (size_t i = 0; i < def_vector.size(); i++) {
+        ASSERT_EQ(def_vector[i], my_vector[i]);
+    }
+    ASSERT_EQ(my_vector.size(), def_vector.size());
+    ASSERT_EQ(my_vector.capacity(), def_vector.capacity());
+}
 
 TEST(Erase, Vector) {
     ft::vector<int> myvector;

@@ -254,11 +254,36 @@ namespace ft {
             if (first == last)
                 return;
             --last;
+            size_type pos = getPosition(position);
             while (first != last) {
-                insert(position, *last);
+                if (_size == _capacity)
+                    reserveCapacity(_size * 2);
+                for (size_type i = 0; i < _size; i++) {
+                    if (i == pos) {
+                        for (size_type j = _size; j > i; j--) {
+                            _alloc.construct(_vector + j, *(_vector + j - 1));
+                            _alloc.destroy(_vector + j - 1);
+                        }
+                        _alloc.construct(_vector + i, *last);
+                        ++_size;
+                        break;
+                    }
+                }
                 --last;
             }
-            insert(position, *first);
+            if (_size == _capacity)
+                reserveCapacity(_size * 2);
+            for (size_type i = 0; i < _size; i++) {
+                if (i == pos) {
+                    for (size_type j = _size; j > i; j--) {
+                        _alloc.construct(_vector + j, *(_vector + j - 1));
+                        _alloc.destroy(_vector + j - 1);
+                    }
+                    _alloc.construct(_vector + i, *last);
+                    ++_size;
+                    break;
+                }
+            }
         }
 
         iterator erase (iterator position) {
