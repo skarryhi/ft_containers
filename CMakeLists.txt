@@ -20,3 +20,11 @@ add_test( runVector runVector)
 add_executable(runList list_test.cpp list.hpp)
 target_link_libraries(runList gtest gtest_main)
 add_test( runList runList)
+
+add_executable(runStack stack_test.cpp stack.hpp)
+target_link_libraries(runStack gtest gtest_main)
+add_test( runStack runStack)
+
+add_executable(runQueue queue_test.cpp queue.hpp)
+target_link_libraries(runQueue gtest gtest_main)
+add_test( runQueue runQueue)

@@ -110,28 +110,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -154,6 +132,28 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -188,19 +188,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named runVector
-
-# Build rule for target.
-runVector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runVector
-.PHONY : runVector
-
-# fast build rule for target.
-runVector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
-.PHONY : runVector/fast
-
-#=============================================================================
 # Target rules for targets named runList
 
 # Build rule for target.
@@ -212,6 +199,45 @@ runList: cmake_check_build_system
 runList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/build
 .PHONY : runList/fast
+
+#=============================================================================
+# Target rules for targets named runQueue
+
+# Build rule for target.
+runQueue: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runQueue
+.PHONY : runQueue
+
+# fast build rule for target.
+runQueue/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/build
+.PHONY : runQueue/fast
+
+#=============================================================================
+# Target rules for targets named runStack
+
+# Build rule for target.
+runStack: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runStack
+.PHONY : runStack
+
+# fast build rule for target.
+runStack/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/build
+.PHONY : runStack/fast
+
+#=============================================================================
+# Target rules for targets named runVector
+
+# Build rule for target.
+runVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runVector
+.PHONY : runVector
+
+# fast build rule for target.
+runVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
+.PHONY : runVector/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -292,6 +318,60 @@ list_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.s
 .PHONY : list_test.cpp.s
 
+queue_test.o: queue_test.cpp.o
+
+.PHONY : queue_test.o
+
+# target to build an object file
+queue_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.o
+.PHONY : queue_test.cpp.o
+
+queue_test.i: queue_test.cpp.i
+
+.PHONY : queue_test.i
+
+# target to preprocess a source file
+queue_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.i
+.PHONY : queue_test.cpp.i
+
+queue_test.s: queue_test.cpp.s
+
+.PHONY : queue_test.s
+
+# target to generate assembly for a file
+queue_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.s
+.PHONY : queue_test.cpp.s
+
+stack_test.o: stack_test.cpp.o
+
+.PHONY : stack_test.o
+
+# target to build an object file
+stack_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.o
+.PHONY : stack_test.cpp.o
+
+stack_test.i: stack_test.cpp.i
+
+.PHONY : stack_test.i
+
+# target to preprocess a source file
+stack_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.i
+.PHONY : stack_test.cpp.i
+
+stack_test.s: stack_test.cpp.s
+
+.PHONY : stack_test.s
+
+# target to generate assembly for a file
+stack_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.s
+.PHONY : stack_test.cpp.s
+
 vector_test.o: vector_test.cpp.o
 
 .PHONY : vector_test.o
@@ -337,10 +417,18 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... runList"
+	@echo "... runQueue"
+	@echo "... runStack"
 	@echo "... runVector"
 	@echo "... list_test.o"
 	@echo "... list_test.i"
 	@echo "... list_test.s"
+	@echo "... queue_test.o"
+	@echo "... queue_test.i"
+	@echo "... queue_test.s"
+	@echo "... stack_test.o"
+	@echo "... stack_test.i"
+	@echo "... stack_test.s"
 	@echo "... vector_test.o"
 	@echo "... vector_test.i"
 	@echo "... vector_test.s"

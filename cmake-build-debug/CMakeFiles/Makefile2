@@ -73,8 +73,10 @@ CMAKE_BINARY_DIR = /Users/skarry/Desktop/ft_containers/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/runVector.dir/all
 all: CMakeFiles/runList.dir/all
+all: CMakeFiles/runQueue.dir/all
+all: CMakeFiles/runStack.dir/all
+all: CMakeFiles/runVector.dir/all
 all: google_test/all
 
 .PHONY : all
@@ -85,8 +87,10 @@ preinstall: google_test/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/runVector.dir/clean
 clean: CMakeFiles/runList.dir/clean
+clean: CMakeFiles/runQueue.dir/clean
+clean: CMakeFiles/runStack.dir/clean
+clean: CMakeFiles/runVector.dir/clean
 clean: google_test/clean
 
 .PHONY : clean
@@ -152,34 +156,6 @@ google_test/googlemock/gtest/clean: google_test/googlemock/gtest/CMakeFiles/gtes
 .PHONY : google_test/googlemock/gtest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/runVector.dir
-
-# All Build rule for target.
-CMakeFiles/runVector.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/runVector.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target runVector"
-.PHONY : CMakeFiles/runVector.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/runVector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 6
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/runVector.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/runVector.dir/rule
-
-# Convenience name for target.
-runVector: CMakeFiles/runVector.dir/rule
-
-.PHONY : runVector
-
-# clean rule for target.
-CMakeFiles/runVector.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/clean
-.PHONY : CMakeFiles/runVector.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/runList.dir
 
 # All Build rule for target.
@@ -206,6 +182,90 @@ runList: CMakeFiles/runList.dir/rule
 CMakeFiles/runList.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/clean
 .PHONY : CMakeFiles/runList.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/runQueue.dir
+
+# All Build rule for target.
+CMakeFiles/runQueue.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/runQueue.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target runQueue"
+.PHONY : CMakeFiles/runQueue.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runQueue.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/runQueue.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/runQueue.dir/rule
+
+# Convenience name for target.
+runQueue: CMakeFiles/runQueue.dir/rule
+
+.PHONY : runQueue
+
+# clean rule for target.
+CMakeFiles/runQueue.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/clean
+.PHONY : CMakeFiles/runQueue.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/runStack.dir
+
+# All Build rule for target.
+CMakeFiles/runStack.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/runStack.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=13,14 "Built target runStack"
+.PHONY : CMakeFiles/runStack.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runStack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/runStack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/runStack.dir/rule
+
+# Convenience name for target.
+runStack: CMakeFiles/runStack.dir/rule
+
+.PHONY : runStack
+
+# clean rule for target.
+CMakeFiles/runStack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/clean
+.PHONY : CMakeFiles/runStack.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/runVector.dir
+
+# All Build rule for target.
+CMakeFiles/runVector.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+CMakeFiles/runVector.dir/all: google_test/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=15,16 "Built target runVector"
+.PHONY : CMakeFiles/runVector.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runVector.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/runVector.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/runVector.dir/rule
+
+# Convenience name for target.
+runVector: CMakeFiles/runVector.dir/rule
+
+.PHONY : runVector
+
+# clean rule for target.
+CMakeFiles/runVector.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/clean
+.PHONY : CMakeFiles/runVector.dir/clean
 
 #=============================================================================
 # Target rules for target google_test/googlemock/CMakeFiles/gmock.dir

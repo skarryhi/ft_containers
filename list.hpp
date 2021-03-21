@@ -1,7 +1,6 @@
 #ifndef LIST_HPP
 #define LIST_HPP
 
-#include <iostream>
 #include <memory>
 #include <iterator>
 

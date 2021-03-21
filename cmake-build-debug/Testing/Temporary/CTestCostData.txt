@@ -1,3 +1,5 @@
-runVector 3 0.0142723
-runList 3 0.00138995
+runVector 10 0.00180928
+runList 10 0.000421021
+runStack 4 0.00102957
+runQueue 1 0.00316853
 ---

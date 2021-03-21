@@ -292,11 +292,15 @@ memory
 iterator
 -
 
-/Users/skarry/Desktop/ft_containers/list_test.cpp
-gtest/gtest.h
-/Users/skarry/Desktop/ft_containers/gtest/gtest.h
+/Users/skarry/Desktop/ft_containers/stack.hpp
 list.hpp
 /Users/skarry/Desktop/ft_containers/list.hpp
-list
+
+/Users/skarry/Desktop/ft_containers/stack_test.cpp
+gtest/gtest.h
+/Users/skarry/Desktop/ft_containers/gtest/gtest.h
+stack.hpp
+/Users/skarry/Desktop/ft_containers/stack.hpp
+stack
 -
 
