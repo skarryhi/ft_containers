@@ -201,6 +201,19 @@ runVector/fast:
 .PHONY : runVector/fast
 
 #=============================================================================
+# Target rules for targets named runList
+
+# Build rule for target.
+runList: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runList
+.PHONY : runList
+
+# fast build rule for target.
+runList/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/build
+.PHONY : runList/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -252,6 +265,33 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f google_test/googlemock/gtest/CMakeFiles/gtest.dir/build.make google_test/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
+list_test.o: list_test.cpp.o
+
+.PHONY : list_test.o
+
+# target to build an object file
+list_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.o
+.PHONY : list_test.cpp.o
+
+list_test.i: list_test.cpp.i
+
+.PHONY : list_test.i
+
+# target to preprocess a source file
+list_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.i
+.PHONY : list_test.cpp.i
+
+list_test.s: list_test.cpp.s
+
+.PHONY : list_test.s
+
+# target to generate assembly for a file
+list_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.s
+.PHONY : list_test.cpp.s
+
 vector_test.o: vector_test.cpp.o
 
 .PHONY : vector_test.o
@@ -296,7 +336,11 @@ help:
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... runList"
 	@echo "... runVector"
+	@echo "... list_test.o"
+	@echo "... list_test.i"
+	@echo "... list_test.s"
 	@echo "... vector_test.o"
 	@echo "... vector_test.i"
 	@echo "... vector_test.s"

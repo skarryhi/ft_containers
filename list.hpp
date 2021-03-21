@@ -39,6 +39,7 @@ namespace ft {
                 push_back(val);
             }
         }
+
         template <class InputIterator>
         list (InputIterator first, InputIterator last,
             const allocator_type& alloc = allocator_type(), typename ft::enable_if<std::__is_input_iterator<InputIterator>::value>::type* = 0) : _alloc(alloc), _size(0) {
@@ -51,8 +52,8 @@ namespace ft {
 
         list (const list& x) : _size(0) {
             startList();
-            iterator temp(x.begin());
-            iterator endList(x.end());
+            const_iterator temp = x.begin();
+            const_iterator endList = x.end();
             while (temp != endList) {
                 push_back(*temp);
                 ++temp;
@@ -61,19 +62,20 @@ namespace ft {
 
         list& operator=(const list& x) {
             clear();
-            iterator temp(x.begin());
-            iterator endList(x.end());
+            const_iterator temp = x.begin();
+            const_iterator endList = x.end();
             while (temp != endList) {
                 push_back(*temp);
                 ++temp;
             }
+            _size = x._size;
             return *this;
         }
 
         ~list() {
             clear();
-            // _alloc.deallocate(_end, 1);
-            // _allocator_rebind.deallocate(_end, 1);
+//             _alloc.deallocate(_end, 1);
+             _allocator_rebind.deallocate(_end, 1);
         }
 	
         //Modifiers
@@ -149,8 +151,9 @@ namespace ft {
         template <class InputIterator>
         void insert (iterator position, InputIterator first, InputIterator last, typename ft::enable_if<std::__is_input_iterator<InputIterator>::value>::type* = 0) {
             iterator res = position;
-            while (first != last--) {
-                insert(res, *last);
+            while (first != last) {
+                insert(res, *first);
+                ++first;
             }
         }
 
@@ -180,10 +183,10 @@ namespace ft {
 
         void resize (size_type n, value_type val = value_type()) {
             if (n < _size) {
-                iterator iter(_end->next);
-                while (n++ != _size + 1)
+                iterator iter = begin();
+                while (n--)
                     ++iter;
-                erase(iter, this->end());
+                erase(iter, end());
             }
             else if (n > _size) {
                 n -= _size;
@@ -203,13 +206,10 @@ namespace ft {
 
         //Element access
 
-        reference front() {return *_end->next;}
-
-        const_reference front() const {return *_end->next;}
-
-        reference back() {return *_end;}
-
-        const_reference back() const {return *_end;}
+        reference front() {return *_end->next->content;}
+        const_reference front() const {return *_end->next->content;}
+        reference back() {return *_end->prev->content;}
+        const_reference back() const {return *_end->prev->content;}
 
         //Operations
 
@@ -224,10 +224,8 @@ namespace ft {
                 --position;
                 last = preLast;
             }
-                preLast = preLast->prev;
                 splice(position, x, iterator(last));
                 --position;
-                last = preLast;
         }
 
         void splice (iterator position, list& x, iterator i) {
@@ -240,6 +238,8 @@ namespace ft {
             changeList->prev = posList->prev;
             changeList->next->prev = changeList;
             changeList->prev->next = changeList;
+            ++_size;
+            --x._size;
         }
 
         void splice (iterator position, list& x, iterator first, iterator last) {
@@ -253,10 +253,8 @@ namespace ft {
                 --position;
                 lastElem = preLast;
             }
-                preLast = preLast->prev;
                 splice(position, x, iterator(lastElem));
                 --position;
-                lastElem = preLast;
         }
 
         void remove (const value_type& val) {
@@ -332,6 +330,8 @@ namespace ft {
                         first = first->next;
                     xfirst = x._end->next;
                 }
+                _size += x._size;
+                x._size = 0;
             }
         }
 
@@ -347,6 +347,8 @@ namespace ft {
                         first = first->next;
                     xfirst = x._end->next;
                 }
+                _size += x._size;
+                x._size = 0;
             }
         }
 
@@ -400,9 +402,10 @@ namespace ft {
             int flag(1);
             while (size--) {
                 swapList(first, second);
-                if (flag--) {
+                if (flag) {
                     second = second->next;
                     first = first->prev;
+                    flag--;
                 }
                 else {
                     second = second->prev;
@@ -477,237 +480,112 @@ namespace ft {
         private:
             t_list  *_element;
         public:
-
             explicit iterator(t_list *pointer = nullptr) : _element(pointer) {}
+            iterator&    operator=(iterator const& other) { _element = other._element; return(*this);}
 
             iterator(iterator const& other) {*this = other;}
-
-            iterator(const_iterator const& other) {*this = other;}
-
             ~iterator() {}
 
-            iterator&    operator=(iterator const& other) {
-                _element = other._element;
-                return(*this);
-            }
-
-            iterator&    operator=(const_iterator const& other) {
-                _element = other.getElement();
-                return(*this);
-            }
 
             bool        operator==(iterator const& other) {return other._element == _element;}
-        
             bool        operator!=(iterator const& other) {return other._element != _element;}
+            bool        operator==(const_iterator const& other) {return other.getElement() == _element;}
+            bool        operator!=(const_iterator const& other) {return other.getElement()!= _element;}
 
-            iterator&   operator--() {
-            _element = _element->prev;
-            return *this;
-            }
-
-            iterator&   operator++() {
-                _element = _element->next;
-                return *this;
-            }
-
-            iterator  operator++(int) {
-                iterator temp(_element);
-                operator++();
-                return temp;
-            }
-
-            iterator  operator--(int) {
-                iterator temp(_element);
-                operator--();
-                return temp;
-            }
+            iterator&   operator++() { _element = _element->next; return *this;}
+            iterator&   operator--() { _element = _element->prev; return *this;}
+            iterator  operator++(int) { iterator temp(_element); operator++(); return temp;}
+            iterator  operator--(int) { iterator temp(_element); operator--(); return temp;}
 
             T&	operator*() const {return *_element->content;}
             T*  operator->() const {return _element->content;}
-
             t_list*  getElement() const {return _element;}
         };
-
         iterator begin() {return(iterator(_end->next));}
         iterator end() {return(iterator(_end));}
+
 
         class const_iterator : public std::iterator<std::bidirectional_iterator_tag, const value_type> {
         private:
             t_list   *_element;
         public:
             explicit const_iterator(t_list *pointer = nullptr) : _element(pointer) {}
-
             const_iterator(const_iterator const& other) {*this = other;}
-
             const_iterator(iterator const& other) {*this = other;}
-
             ~const_iterator() {}
 
-            const_iterator&    operator=(const_iterator const& other) {
-                _element = other._element;
-                return(*this);
-            }
-
-            const_iterator&    operator=(iterator const& other) {
-                _element = other.getElement();
-                return(*this);
-            }
+            const_iterator&    operator=(const_iterator const& other) { _element = other._element; return(*this);}
+            const_iterator&    operator=(iterator const& other) { _element = other.getElement(); return(*this);}
 
             bool        operator==(const_iterator const& other) {return other._element == _element;}
-        
             bool        operator!=(const_iterator const& other) {return other._element != _element;}
 
-            const_iterator&   operator--() {
-            _element = _element->prev;
-            return *this;
-            }
-
-            const_iterator&   operator++() {
-                _element = _element->next;
-                return *this;
-            }
-
-            const_iterator  operator++(int) {
-                iterator temp(_element);
-                operator++();
-                return temp;
-            }
-
-            const_iterator  operator--(int) {
-                iterator temp(_element);
-                operator--();
-                return temp;
-            }
+            const_iterator&   operator--() { _element = _element->prev; return *this;}
+            const_iterator&   operator++() { _element = _element->next; return *this;}
+            const_iterator  operator++(int) { iterator temp(_element); operator++(); return temp;}
+            const_iterator  operator--(int) { iterator temp(_element); operator--(); return temp;}
 
             T	const& operator*() const {return *_element->content;}
             T  const* operator->() const {return _element->content;}
-
             t_list*   getElement() const {return _element;}
         };
-
         const_iterator begin() const {return(iterator(_end->next));}
         const_iterator end() const {return(iterator(_end));}
+
 
         class reverse_iterator : public std::reverse_iterator<iterator> {
         private:
             t_list  *_element;
         public:
-
             explicit reverse_iterator(t_list *pointer = nullptr) : _element(pointer) {}
-
             reverse_iterator(reverse_iterator const& other) {*this = other;}
-
-            reverse_iterator(const_reverse_iterator const& other) {*this = other;}
-
             ~reverse_iterator() {}
 
-            reverse_iterator&    operator=(reverse_iterator const& other) {
-                _element = other._element;
-                return(*this);
-            }
-
-            reverse_iterator&    operator=(const_reverse_iterator const& other) {
-                _element = other.getElement();
-                return(*this);
-            }
+            reverse_iterator&    operator=(reverse_iterator const& other) { _element = other._element; return(*this);}
 
             bool        operator==(reverse_iterator const& other) {return other._element == _element;}
-        
             bool        operator!=(reverse_iterator const& other) {return other._element != _element;}
 
-            reverse_iterator&   operator--() {
-            _element = _element->next;
-            return *this;
-            }
+            reverse_iterator&   operator++() { _element = _element->prev; return *this;}
+            reverse_iterator&   operator--() { _element = _element->next; return *this;}
+            reverse_iterator  operator++(int) { reverse_iterator temp(_element); operator++(); return temp;}
+            reverse_iterator  operator--(int) { reverse_iterator temp(_element); operator--(); return temp;}
 
-            reverse_iterator&   operator++() {
-                _element = _element->prev;
-                return *this;
-            }
-
-            reverse_iterator  operator++(int) {
-                reverse_iterator temp(_element);
-                operator++();
-                return temp;
-            }
-
-            reverse_iterator  operator--(int) {
-                reverse_iterator temp(_element);
-                operator--();
-                return temp;
-            }
-
-            T&	operator*() const {return *_element->content;}
+            T&	operator*() const {return *(_element->content);}
             T*  operator->() const {return _element->content;}
 
             t_list*  getElement() const {return _element;}
         };
+        reverse_iterator rbegin() {return(reverse_iterator(_end->prev));}
+        reverse_iterator rend() {return(reverse_iterator(_end));}
 
-        reverse_iterator rbegin() {return(reverse_iterator(++_end));}
-        reverse_iterator rend() {return(reverse_iterator(--_end));}
 
         class const_reverse_iterator : public std::reverse_iterator<iterator> {
         private:
             t_list  *_element;
-
         public:
-
             explicit const_reverse_iterator(t_list *pointer = nullptr) : _element(pointer) {}
-
             const_reverse_iterator(const_reverse_iterator const& other) {*this = other;}
-
             const_reverse_iterator(reverse_iterator const& other) {*this = other;}
-
             ~const_reverse_iterator() {}
 
-            const_reverse_iterator&    operator=(const_reverse_iterator const& other) {
-                _element = other._element;
-                return(*this);
-            }
-
-            const_reverse_iterator&    operator=(reverse_iterator const& other) {
-                _element = other.getElement();
-                return(*this);
-            }
+            const_reverse_iterator&    operator=(const_reverse_iterator const& other) { _element = other._element; return(*this);}
+            const_reverse_iterator&    operator=(reverse_iterator const& other) { _element = other.getElement(); return(*this);}
 
             bool        operator==(const_reverse_iterator const& other) {return other._element == _element;}
-        
             bool        operator!=(const_reverse_iterator const& other) {return other._element != _element;}
 
-            const_reverse_iterator&   operator--() {
-            _element = _element->next;
-            return *this;
-            }
-
-            const_reverse_iterator&   operator++() {
-                _element = _element->prev;
-                return *this;
-            }
-
-            const_reverse_iterator  operator++(int) {
-                const_reverse_iterator temp(_element);
-                operator++();
-                return temp;
-            }
-
-            const_reverse_iterator  operator--(int) {
-                const_reverse_iterator temp(_element);
-                operator--();
-                return temp;
-            }
+            const_reverse_iterator&   operator++() { _element = _element->prev; return *this;}
+            const_reverse_iterator&   operator--() { _element = _element->next; return *this;}
+            const_reverse_iterator  operator++(int) { const_reverse_iterator temp(_element); operator++(); return temp;}
+            const_reverse_iterator  operator--(int) { const_reverse_iterator temp(_element); operator--(); return temp;}
 
             T const&	operator*() const {return *_element->content;}
             T const*  operator->() const {return _element->content;}
-
             t_list*  getElement() const {return _element;}
         };
-
-        const_reverse_iterator rbegin() const {return(const_reverse_iterator(++_end));}
-        const_reverse_iterator rend() const {return(const_reverse_iterator(--_end));}
-
-
-        
-            
+        const_reverse_iterator rbegin() const {return(const_reverse_iterator(_end->prev));}
+        const_reverse_iterator rend() const {return(const_reverse_iterator(_end));}
     };
 
     template <class T, class Alloc>
