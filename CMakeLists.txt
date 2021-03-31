@@ -28,3 +28,9 @@ add_test( runStack runStack)
 add_executable(runQueue queue_test.cpp queue.hpp)
 target_link_libraries(runQueue gtest gtest_main)
 add_test( runQueue runQueue)
+
+add_executable(runMap map_test.cpp map.hpp)
+target_link_libraries(runMap gtest gtest_main)
+add_test( runMap runMap)
+
+add_executable(ft_containers main.cpp map.hpp)

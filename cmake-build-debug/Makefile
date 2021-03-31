@@ -88,6 +88,18 @@ install/strip/fast: preinstall/fast
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -109,18 +121,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target test
 test:
@@ -188,6 +188,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named runVector
+
+# Build rule for target.
+runVector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runVector
+.PHONY : runVector
+
+# fast build rule for target.
+runVector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
+.PHONY : runVector/fast
+
+#=============================================================================
+# Target rules for targets named runMap
+
+# Build rule for target.
+runMap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runMap
+.PHONY : runMap
+
+# fast build rule for target.
+runMap/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/build
+.PHONY : runMap/fast
+
+#=============================================================================
 # Target rules for targets named runList
 
 # Build rule for target.
@@ -199,6 +225,19 @@ runList: cmake_check_build_system
 runList/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/build
 .PHONY : runList/fast
+
+#=============================================================================
+# Target rules for targets named ft_containers
+
+# Build rule for target.
+ft_containers: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ft_containers
+.PHONY : ft_containers
+
+# fast build rule for target.
+ft_containers/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/build
+.PHONY : ft_containers/fast
 
 #=============================================================================
 # Target rules for targets named runQueue
@@ -225,19 +264,6 @@ runStack: cmake_check_build_system
 runStack/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/build
 .PHONY : runStack/fast
-
-#=============================================================================
-# Target rules for targets named runVector
-
-# Build rule for target.
-runVector: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 runVector
-.PHONY : runVector
-
-# fast build rule for target.
-runVector/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/build
-.PHONY : runVector/fast
 
 #=============================================================================
 # Target rules for targets named gmock
@@ -317,6 +343,60 @@ list_test.s: list_test.cpp.s
 list_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.s
 .PHONY : list_test.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+map_test.o: map_test.cpp.o
+
+.PHONY : map_test.o
+
+# target to build an object file
+map_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.o
+.PHONY : map_test.cpp.o
+
+map_test.i: map_test.cpp.i
+
+.PHONY : map_test.i
+
+# target to preprocess a source file
+map_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.i
+.PHONY : map_test.cpp.i
+
+map_test.s: map_test.cpp.s
+
+.PHONY : map_test.s
+
+# target to generate assembly for a file
+map_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.s
+.PHONY : map_test.cpp.s
 
 queue_test.o: queue_test.cpp.o
 
@@ -412,17 +492,25 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ft_containers"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... runList"
+	@echo "... runMap"
 	@echo "... runQueue"
 	@echo "... runStack"
 	@echo "... runVector"
 	@echo "... list_test.o"
 	@echo "... list_test.i"
 	@echo "... list_test.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... map_test.o"
+	@echo "... map_test.i"
+	@echo "... map_test.s"
 	@echo "... queue_test.o"
 	@echo "... queue_test.i"
 	@echo "... queue_test.s"
