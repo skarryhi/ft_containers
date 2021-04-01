@@ -259,3 +259,43 @@ TEST(Equal_range, Map) {
     ASSERT_EQ(my_ret.first->second, def_ret.first->second);
     ASSERT_EQ(my_ret.second->second, def_ret.second->second);
 }
+
+
+TEST(Erase, Map) {
+    ft::map<char,int> my_map;
+    std::map<char,int> def_map;
+    ft::map<char,int>::iterator my_it;
+    std::map<char,int>::iterator def_it;
+
+    my_map['a']=10;
+    my_map['b']=20;
+    my_map['c']=30;
+    my_map['d']=40;
+    my_map['e']=50;
+    my_map['f']=60;
+
+    def_map['a']=10;
+    def_map['b']=20;
+    def_map['c']=30;
+    def_map['d']=40;
+    def_map['e']=50;
+    def_map['f']=60;
+
+    my_it = my_map.find('b');
+    my_map.erase (my_it);
+    my_map.erase ('c');
+    my_it = my_map.find ('e');
+    my_map.erase ( my_it, my_map.end());
+
+    def_it = def_map.find('b');
+    def_map.erase (def_it);
+    def_map.erase ('c');
+    def_it = def_map.find ('e');
+    def_map.erase ( def_it, def_map.end() );
+
+    my_it = my_map.begin();
+    for (def_it = def_map.begin(); def_it != def_map.end(); ++def_it) {
+        ASSERT_EQ(my_it->first, def_it->first);
+        ++my_it;
+    }
+}

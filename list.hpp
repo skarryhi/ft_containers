@@ -73,7 +73,7 @@ namespace ft {
 
         ~list() {
             clear();
-//             _alloc.deallocate(_end, 1);
+            _alloc.deallocate(_end->content, 1);
              _allocator_rebind.deallocate(_end, 1);
         }
 	

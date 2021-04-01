@@ -26,7 +26,10 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/runMap.dir/map_test.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/runMap.dir/map_test.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_containers" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_containers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/runList" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/runList" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/runMap" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/runMap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/list.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/list_test.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/map.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map_test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/map_test.cpp" afterDir="false" />
@@ -82,7 +85,7 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.runMap">
-    <configuration name="Equal_range.Map" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runMap" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runMap" TEST_CLASS="Equal_range" TEST_METHOD="Map" TEST_MODE="SUITE_TEST">
+    <configuration name="Erase.Map" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ft_containers" TARGET_NAME="runMap" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ft_containers" RUN_TARGET_NAME="runMap" TEST_CLASS="Erase" TEST_METHOD="Map" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -159,18 +162,18 @@
       <item itemvalue="Google Test.runQueue" />
       <item itemvalue="Google Test.runStack" />
       <item itemvalue="Google Test.runVector" />
-      <item itemvalue="Google Test.Equal_range.Map" />
       <item itemvalue="Google Test.Insert.Map" />
       <item itemvalue="Google Test.InsertPosition.Map" />
       <item itemvalue="Google Test.Find.Map" />
+      <item itemvalue="Google Test.Erase.Map" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Google Test.Find.Map" />
+        <item itemvalue="Google Test.Erase.Map" />
         <item itemvalue="CMake Application.ft_containers" />
+        <item itemvalue="Google Test.Find.Map" />
         <item itemvalue="Google Test.InsertPosition.Map" />
         <item itemvalue="Google Test.Insert.Map" />
-        <item itemvalue="Google Test.Equal_range.Map" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +229,7 @@
       <workItem from="1617026119693" duration="10573000" />
       <workItem from="1617194992769" duration="5429000" />
       <workItem from="1617204987095" duration="6390000" />
-      <workItem from="1617278273162" duration="11373000" />
+      <workItem from="1617278273162" duration="13676000" />
     </task>
     <servers />
   </component>

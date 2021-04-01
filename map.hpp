@@ -8,6 +8,9 @@
 
 namespace ft {
 
+//    template<bool Cond, class T = void> struct enable_if {};
+//    template<class T> struct enable_if<true, T> { typedef T type; };
+
     template < class Key, class T, class Compare = std::less<Key>,
             class Alloc = std::allocator<std::pair<const Key, T> > >
     class map {
@@ -79,9 +82,9 @@ namespace ft {
         }
 
         void    deleteNode(node * const oldNode) {
-//            _alloc.desroy(oldNode->content);
-//            _alloc.deallocate(oldNode->content, 1);
-//            _alloc.deallocate(oldNode, 1);
+            _alloc.destroy(oldNode->content);
+            _alloc.deallocate(oldNode->content, 1);
+            _allocator_rebind.deallocate(oldNode, 1);
             --_size;
         }
 
@@ -333,15 +336,26 @@ namespace ft {
             erase(it);
         }
 
-//        void erase (iterator first, iterator last) {
-//
-//        }
+        void erase (iterator first, iterator last) {
+            vector<iterator> iterators;
+            while (first != last) {
+                iterators.push_back(first);
+                ++first;
+            }
+            for (int i = 0; i < iterators.size(); i++) {
+                erase(iterators[i]);
+            }
+        }
 
 
         void swap (map& x) {
             map y(x);
             x = *this;
             *this = y;
+        }
+
+        void clear() {
+            erase(begin(), end());
         }
 
         iterator find (const key_type& k) {
