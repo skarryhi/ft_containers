@@ -4,11 +4,9 @@
 #include <iostream>
 #include <memory>
 #include <iterator>
+#include "vector.hpp"
 
 namespace ft {
-
-    template<bool Cond, class T = void> struct enable_if {};
-    template<class T> struct enable_if<true, T> { typedef T type; };
 
     template < class Key, class T, class Compare = std::less<Key>,
             class Alloc = std::allocator<std::pair<const Key, T> > >
@@ -47,7 +45,6 @@ namespace ft {
             struct Node *parent;
             value_type *content;
         } node;
-        node *_begin;
     private:
 
 
@@ -56,6 +53,7 @@ namespace ft {
         key_compare _compare;
         allocator_type _alloc;
         size_type _size;
+        node *_begin;
         node *_end;
         struct Node *_root;
 
@@ -80,10 +78,10 @@ namespace ft {
             return newNode;
         }
 
-        void    deleteNode(node *oldNode) {
-            _alloc.desroy(oldNode->content);
-            _alloc.deallocate(oldNode->content, 1);
-            _alloc.deallocate(oldNode, 1);
+        void    deleteNode(node * const oldNode) {
+//            _alloc.desroy(oldNode->content);
+//            _alloc.deallocate(oldNode->content, 1);
+//            _alloc.deallocate(oldNode, 1);
             --_size;
         }
 
@@ -96,15 +94,33 @@ namespace ft {
             _root = _begin;
         }
 
-//        template <class InputIterator>
-//        map (InputIterator first, InputIterator last,
-//             const key_compare& comp = key_compare(),
-//             const allocator_type& alloc = allocator_type());
-//        map (const map& x);
+        template <class InputIterator>
+        map (InputIterator first, InputIterator last, const key_compare& comp = key_compare(),
+             const allocator_type& alloc = allocator_type()) : _size(0), _compare(comp), _alloc(alloc) {
+            while (first != last) {
+                insert(*first);
+                ++first;
+            }
+        }
+        map (const map& x) : _size(0) {*this = x;}
+
+//        ~map() {} TODO
+
+        map& operator= (const map& x) {
+            //clear() then clear is will be ready
+            _compare = x._compare;
+            _alloc = x._alloc;
+            _begin->parent = nullptr;
+            _end->parent = nullptr;
+            _root = _begin;
+            insert(x.begin(), x.end());
+        }
 
         bool empty() const { return !_size;}
         size_type size() const { return _size;}
         size_type max_size() const { return -1 / sizeof(reference);}// TODO not work
+        key_compare key_comp() const {return _compare;}
+        value_compare value_comp() const {return value_compare(_compare);}
 
         mapped_type& operator[] (const key_type& k) {
             return insert(std::make_pair(k, mapped_type())).first->second;
@@ -169,10 +185,259 @@ namespace ft {
             return std::make_pair(it, change);
         }
 
-//        iterator insert (iterator position, const value_type& val) {}
+        iterator insert (iterator position, const value_type& val) {
+            map::iterator it;
+            node *tmp = position.getNode();
+            if (_compare(val.first, position->first)) {
+                if (!_compare(position->first, val.first)) {
+                    if (tmp->left == _begin || tmp->left == nullptr) {
+                        if (tmp->left == _begin) {
+                            tmp->left = newNode(val);
+                            _begin->parent = tmp->left;
+                            it = iterator(tmp->left);
+                            tmp->left->left = _begin;
+                        } else {
+                            tmp->left = newNode(val);
+                            it = iterator(tmp->left);
+                            tmp->left->left = nullptr;
+                        }
+                        tmp->left->parent = tmp;
+                    }
+                    else {
+                        node *after = tmp->left;
+                        tmp->left = newNode(val);
+                        after->parent = tmp->left;
+                        it = iterator(tmp->left);
+                        tmp->left->left = after;
+                        tmp->left->parent = tmp;
+                    }
+                }
+            }
+            else if (_compare(position->first, val.first)) {
+                if (!_compare(val.first, position->first)) {
+                    if (tmp->right == _end || tmp->right == nullptr) {
+                        if (tmp->right == _end) {
+                            tmp->right = newNode(val);
+                            _end->parent = tmp->right;
+                            it = iterator(tmp->right);
+                            tmp->right->right = _end;
+                        } else {
+                            tmp->right = newNode(val);
+                            it = iterator(tmp->right);
+                            tmp->right->right = nullptr;
+                        }
+                        tmp->right->parent = tmp;
+                    }
+                    else {
+                        node *after = tmp->right;
+                        tmp->right = newNode(val);
+                        after->parent = tmp->right;
+                        it = iterator(tmp->right);
+                        tmp->right->right = after;
+                        tmp->right->parent = tmp;
+                    }
+                }
+            }
+            else
+                it = iterator(tmp);
+            return it;
+        }
+
+        template <class InputIterator>
+        void insert (InputIterator first, InputIterator last) {
+            while (first != last) {
+                insert(*first);
+                ++first;
+            }
+        }
+
+        void erase (iterator position) {
+            node *tmp = position.getNode();
+            if (position == end())
+                return;
+
+            if (tmp->parent) { // if have parent
+                if (tmp->parent->right == tmp) { // if left branch
+                    if (tmp->right) {
+                        tmp->parent->right = tmp->right;
+                        tmp->right->parent = tmp->parent;
+                        if (tmp->left) {
+                            tmp->right->left = tmp->left;
+                            tmp->left->parent = tmp->right;
+                        }
+                    } else if (tmp->left) {
+                        tmp->parent->right = tmp->left;
+                        tmp->left->parent = tmp->parent;
+                    } else
+                        tmp->parent->right = nullptr;
+                } else if (tmp->parent->left == tmp) { // if right branch
+                    if (tmp->left) {
+                        tmp->parent->left = tmp->left;
+                        tmp->left->parent = tmp->parent;
+                        if (tmp->right) {
+                            tmp->left->right = tmp->right;
+                            tmp->right->parent = tmp->left;
+                        }
+                    } else if (tmp->right) {
+                        tmp->parent->left = tmp->right;
+                        tmp->right->parent = tmp->parent;
+                    } else
+                        tmp->parent->left = nullptr;
+                }
+            }
+            else if (!tmp->parent) { // if have NOT parent
+                if (tmp->right == _end) {
+                    if (tmp->left == _begin) {
+                        _end->parent = nullptr;
+                        _begin->parent = nullptr;
+                        _root = _begin;
+                    }
+                    else {
+                        tmp->left->parent = nullptr;
+                        node *new_end = tmp->left;
+                        while (new_end->right) {
+                            new_end = new_end->right;
+                        }
+                        new_end->right = _end;
+                        _end->parent = new_end;
+                    }
+                }
+                else if (tmp->left == _begin) {
+                    tmp->right->parent = nullptr;
+                    node *new_begin = tmp->right;
+                    while (new_begin->left) {
+                        new_begin = new_begin->left;
+                    }
+                    new_begin->left = _begin;
+                    _begin->parent = new_begin;
+                }
+                else { // if we have right adn left branch
+                    tmp->right->parent = nullptr;
+                    tmp->left->parent = tmp->right;
+                    if (tmp->right->left) {
+                        node *findpos = tmp->left;
+                        while (findpos->right) {
+                            findpos = findpos->right;
+                        }
+                        findpos->right = tmp->right->left;
+                        tmp->right->left->parent = findpos;
+                    }
+                    tmp->right->left = tmp->left;
+                }
+            }
+            deleteNode(tmp);
+        }
+
+        size_type erase (const key_type& k) {
+            iterator it = find(k);
+            erase(it);
+        }
+
+//        void erase (iterator first, iterator last) {
 //
-//        template <class InputIterator>
-//        void insert (InputIterator first, InputIterator last) {}
+//        }
+
+
+        void swap (map& x) {
+            map y(x);
+            x = *this;
+            *this = y;
+        }
+
+        iterator find (const key_type& k) {
+            iterator it = end();
+            node *tmp = _root;
+            while (tmp && tmp != _begin && tmp != _end) {
+                if (tmp->content->first == k) {
+                    it = iterator(tmp);
+                    break;
+                }
+                if (_compare(tmp->content->first, k))
+                    tmp = tmp->right;
+                else
+                    tmp = tmp->left;
+            }
+            return it;
+        }
+
+        const_iterator find (const key_type& k) const {
+            const_iterator it = end();
+            node *tmp = _root;
+            while (tmp && tmp != _begin && tmp != _end) {
+                if (tmp->content->first == k) {
+                    it = iterator(tmp);
+                    break;
+                }
+                if (_compare(tmp->content->first, k))
+                    tmp = tmp->right;
+                else
+                    tmp = tmp->left;
+            }
+            return it;
+        }
+
+        size_type count (const key_type& k) const {
+            return find(k) == end()? 0:1;
+        }
+
+        iterator lower_bound (const key_type& k) {
+            iterator it = begin();
+            while (it != end()) {
+                if (_compare(it->first, k))
+                    ++it;
+                else
+                    break;
+            }
+            return it;
+        }
+
+        const_iterator lower_bound (const key_type& k) const {
+            const_iterator it = begin();
+            while (it != end()) {
+                if (_compare(it->first, k))
+                    ++it;
+                else
+                    break;
+            }
+            return it;
+        }
+
+        iterator upper_bound (const key_type& k) {
+            iterator it = begin();
+            while (it != end()) {
+                if (_compare(it->first, k))
+                    ++it;
+                else if (_compare(k, it->first))
+                    break;
+                else {
+                    ++it;
+                    break;
+                }
+            }
+            return it;
+        }
+        const_iterator upper_bound (const key_type& k) const {
+            const_iterator it = begin();
+            while (it != end()) {
+                if (_compare(it->first, k))
+                    ++it;
+                else if (_compare(k, it->first))
+                    break;
+                else {
+                    ++it;
+                    break;
+                }
+            }
+            return it;
+        }
+
+        std::pair<const_iterator,const_iterator> equal_range (const key_type& k) const {
+            return std::make_pair(lower_bound(k), upper_bound(k));
+        }
+
+        std::pair<iterator,iterator>             equal_range (const key_type& k) {
+            return std::make_pair(lower_bound(k), upper_bound(k));
+        }
 
         class iterator : public std::iterator<std::bidirectional_iterator_tag, value_type> {
         private:
@@ -194,8 +459,8 @@ namespace ft {
 
             bool operator==(iterator const &other) { return other._node == _node; }
             bool operator!=(iterator const &other) { return other._node != _node; }
-            bool operator==(const_iterator const& other) {return other.getElement() == _node;}
-            bool operator!=(const_iterator const& other) {return other.getElement()!= _node;}
+            bool operator==(const_iterator const& other) {return other.getNode() == _node;}
+            bool operator!=(const_iterator const& other) {return other.getNode()!= _node;}
 
             iterator &operator--() {
                 if (_node->left) {
@@ -233,7 +498,7 @@ namespace ft {
             iterator operator--(int) { iterator temp(_node); operator--(); return temp;}
 
 
-            value_type &operator*() const { return *_node; }
+            value_type &operator*() const { return *_node->content; }
             value_type *operator->() const { return _node->content; }
             node *getNode() const { return _node; }
         };
@@ -259,14 +524,14 @@ namespace ft {
                 return (*this);
             }
             const_iterator&    operator=(iterator const& other) {
-                _node = other.getElement();
+                _node = other.getNode();
                 return (*this);
             }
 
             bool operator==(iterator const &other) { return other._node == _node; }
             bool operator!=(iterator const &other) { return other._node != _node; }
-            bool operator==(const_iterator const& other) {return other.getElement() == _node;}
-            bool operator!=(const_iterator const& other) {return other.getElement()!= _node;}
+            bool operator==(const_iterator const& other) {return other.getNode() == _node;}
+            bool operator!=(const_iterator const& other) {return other.getNode()!= _node;}
 
             const_iterator &operator--() {
                 if (_node->left) {
@@ -304,7 +569,7 @@ namespace ft {
             const_iterator operator--(int) { const_iterator temp(_node); operator--(); return temp;}
 
 
-            value_type &operator*() const { return *_node; }
+            value_type &operator*() const { return *_node->content; }
             value_type *operator->() const { return _node->content; }
             node *getNode() const { return _node; }
         };
@@ -331,8 +596,8 @@ namespace ft {
 
             bool operator==(reverse_iterator const &other) { return other._node == _node; }
             bool operator!=(reverse_iterator const &other) { return other._node != _node; }
-            bool operator==(const_reverse_iterator const& other) {return other.getElement() == _node;}
-            bool operator!=(const_reverse_iterator const& other) {return other.getElement()!= _node;}
+            bool operator==(const_reverse_iterator const& other) {return other.getNode() == _node;}
+            bool operator!=(const_reverse_iterator const& other) {return other.getNode()!= _node;}
 
             reverse_iterator &operator--() {
                 if (_node->right) {
@@ -370,7 +635,7 @@ namespace ft {
             reverse_iterator operator--(int) { reverse_iterator temp(_node); operator--(); return temp;}
 
 
-            value_type &operator*() const { return *_node; }
+            value_type &operator*() const { return *_node->content; }
             value_type *operator->() const { return _node->content; }
             node *getNode() const { return _node; }
         };
@@ -396,14 +661,14 @@ namespace ft {
                 return (*this);
             }
             const_reverse_iterator&    operator=(reverse_iterator const& other) {
-                _node = other.getElement();
+                _node = other.getNode();
                 return(*this);
             }
 
             bool operator==(reverse_iterator const &other) { return other._node == _node; }
             bool operator!=(reverse_iterator const &other) { return other._node != _node; }
-            bool operator==(const_reverse_iterator const& other) {return other.getElement() == _node;}
-            bool operator!=(const_reverse_iterator const& other) {return other.getElement()!= _node;}
+            bool operator==(const_reverse_iterator const& other) {return other.getNode() == _node;}
+            bool operator!=(const_reverse_iterator const& other) {return other.getNode()!= _node;}
 
             const_reverse_iterator &operator--() {
                 if (_node->right) {
@@ -441,7 +706,7 @@ namespace ft {
             const_reverse_iterator operator--(int) { const_reverse_iterator temp(_node); operator--(); return temp;}
 
 
-            value_type &operator*() const { return *_node; }
+            value_type &operator*() const { return *_node->content; }
             value_type *operator->() const { return _node->content; }
             node *getNode() const { return _node; }
         };

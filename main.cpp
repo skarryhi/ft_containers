@@ -7,51 +7,29 @@
 #include <iostream>
 
 int main() {
-    ft::map<int, int> my_map;
-    std::map<int, int> def_map;
+    ft::map<char,int> mymap;
+    ft::map<char,int>::iterator it;
 
-    def_map.insert(std::make_pair(9, 4));
-    my_map.insert(std::make_pair(9, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(6, 4));
-    my_map.insert(std::make_pair(6, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(17, 4));
-    my_map.insert(std::make_pair(17, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(3, 4));
-    my_map.insert(std::make_pair(3, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(1, 4));
-    my_map.insert(std::make_pair(1, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(2, 4));
-    my_map.insert(std::make_pair(2, 4));
-//    std::cout << my_map._begin->parent->content->first << std::endl;
-    def_map.insert(std::make_pair(4, 4));
-    my_map.insert(std::make_pair(4, 4));
-    def_map.insert(std::make_pair(5, 4));
-    my_map.insert(std::make_pair(5, 4));
-    def_map.insert(std::make_pair(8, 4));
-    my_map.insert(std::make_pair(8, 4));
-    def_map.insert(std::make_pair(7, 4));
-    my_map.insert(std::make_pair(7, 4));
-    def_map.insert(std::make_pair(16, 4));
-    my_map.insert(std::make_pair(16, 4));
-    def_map.insert(std::make_pair(20, 4));
-    my_map.insert(std::make_pair(20, 4));
-    def_map.insert(std::make_pair(19, 4));
-    my_map.insert(std::make_pair(19, 4));
-    def_map.insert(std::make_pair(18, 4));
-    my_map.insert(std::make_pair(18, 4));
+    // insert some values:
+    mymap['d']=40;
+    mymap['e']=50;
+    mymap['c']=30;
+    mymap['a']=10;
+    mymap['b']=20;
+    mymap['f']=60;
 
-    ft::map<int, int>::iterator my_it = my_map.begin();
-    std::map<int, int>::iterator def_it = def_map.begin();
-    while (def_it != def_map.end()) {
-        std::cout << "my: " << my_it->first << std::endl;
-        std::cout << "def: " << def_it->first << std::endl;
-        ++def_it;
-        ++my_it;
-    }
+    it=mymap.find('f');
+    mymap.erase (it);                   // erasing by iterator
+
+    mymap.erase ('c');                  // erasing by key
+
+//    it=mymap.find ('e');
+//    mymap.erase ( it, mymap.end() );    // erasing by range
+
+    // show content:
+    for (it=mymap.begin(); it!=mymap.end(); ++it)
+        std::cout << it->first << " => " << it->second << '\n';
+
+    return 0;
 }
 

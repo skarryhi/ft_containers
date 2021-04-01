@@ -293,6 +293,8 @@ memory
 -
 iterator
 -
+vector.hpp
+/Users/skarry/Desktop/ft_containers/vector.hpp
 
 /Users/skarry/Desktop/ft_containers/map_test.cpp
 gtest/gtest.h
@@ -300,5 +302,13 @@ gtest/gtest.h
 map.hpp
 /Users/skarry/Desktop/ft_containers/map.hpp
 map
+-
+
+/Users/skarry/Desktop/ft_containers/vector.hpp
+iostream
+-
+memory
+-
+iterator
 -
 
