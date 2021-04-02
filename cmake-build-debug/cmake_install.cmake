@@ -1,4 +1,4 @@
-# Install script for directory: /Users/skarry/Desktop/ok
+# Install script for directory: /Users/skarry/Desktop/containers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/skarry/Desktop/ok/cmake-build-debug/google_test/cmake_install.cmake")
+  include("/Users/skarry/Desktop/containers/cmake-build-debug/google_test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/skarry/Desktop/ok/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/skarry/Desktop/containers/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

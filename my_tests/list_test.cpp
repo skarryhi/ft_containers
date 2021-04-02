@@ -770,4 +770,5 @@ TEST(ConstReverseIterator, List) {
     --ite;
     --def_ite;
     ASSERT_EQ(*ite, *def_ite);
+     while(1) {}
 }

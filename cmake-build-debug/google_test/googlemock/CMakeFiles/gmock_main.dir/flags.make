@@ -6,5 +6,5 @@ CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/Ma
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /Users/skarry/Desktop/ok/google_test/googlemock/include -isystem /Users/skarry/Desktop/ok/google_test/googlemock -isystem /Users/skarry/Desktop/ok/google_test/googletest/include -isystem /Users/skarry/Desktop/ok/google_test/googletest 
+CXX_INCLUDES = -isystem /Users/skarry/Desktop/containers/google_test/googlemock/include -isystem /Users/skarry/Desktop/containers/google_test/googlemock -isystem /Users/skarry/Desktop/containers/google_test/googletest/include -isystem /Users/skarry/Desktop/containers/google_test/googletest 
 

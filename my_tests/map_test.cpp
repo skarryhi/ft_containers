@@ -324,4 +324,5 @@ TEST(Erase, Map) {
         ASSERT_EQ(my_it->first, def_it->first);
         ++my_it;
     }
+     while(1) {}
 }

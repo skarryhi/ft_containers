@@ -24,6 +24,6 @@ CMakeFiles/runList.dir/my_tests/list_test.cpp.o
  ../google_test/googletest/include/gtest/internal/gtest-string.h
  ../google_test/googletest/include/gtest/internal/gtest-tuple.h
  ../google_test/googletest/include/gtest/internal/gtest-type-util.h
- /Users/skarry/Desktop/ok/includes/ft.h
- /Users/skarry/Desktop/ok/includes/list.hpp
- /Users/skarry/Desktop/ok/my_tests/list_test.cpp
+ /Users/skarry/Desktop/containers/includes/ft.h
+ /Users/skarry/Desktop/containers/includes/list.hpp
+ /Users/skarry/Desktop/containers/my_tests/list_test.cpp

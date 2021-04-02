@@ -552,4 +552,5 @@ TEST(RelationalOperators, Vector) {
     ASSERT_EQ((default_vector<=default_vector2), (my_vector<=my_vector2));
     ASSERT_EQ((default_vector>default_vector2), (my_vector>my_vector2));
     ASSERT_EQ((default_vector<default_vector2), (my_vector<my_vector2));
+     while(1) {}
 }

@@ -359,6 +359,7 @@ namespace ft {
             for (size_type i = 0; i < iterators.size(); i++) {
                 erase(iterators[i]);
             }
+//                while(1){}
         }
 
 
