@@ -4,7 +4,7 @@
 #include "list.hpp"
 
 namespace ft {
-    template < class T, class Container = list<T> >
+    template < class T, class Container = ft::list<T, std::allocator<T> > >
     class queue {
     public:
         typedef T value_type;

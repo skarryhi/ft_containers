@@ -4,15 +4,12 @@
 
 #ifndef FT_CONTAINERS_VECTOR_H
 #define FT_CONTAINERS_VECTOR_H
-
+#include "ft.h"
 #include <iostream>
 #include <memory>
 #include <iterator>
 
 namespace ft {
-
-    template<bool Cond, class T = void> struct enable_if {};
-    template<class T> struct enable_if<true, T> { typedef T type; };
     template <typename T, class Alloc = std::allocator<T> >
 
     class vector {
@@ -407,10 +404,10 @@ namespace ft {
             reverse_iterator(reverse_iterator const& other) {*this = other;}
             ~reverse_iterator() {}
 
-            reverse_iterator&   operator--() {_element += 1; return *this;}
-            reverse_iterator&   operator++() { _element -= 1; return *this;}
-            reverse_iterator  operator+(difference_type val) const {return reverse_iterator(_element - val);}
-            reverse_iterator  operator-(difference_type val) const {return reverse_iterator(_element + val);}
+            virtual reverse_iterator&   operator--() {_element += 1; return *this;}
+            virtual reverse_iterator&   operator++() { _element -= 1; return *this;}
+            virtual reverse_iterator  operator+(difference_type val) const {return reverse_iterator(_element - val);}
+            virtual reverse_iterator  operator-(difference_type val) const {return reverse_iterator(_element + val);}
             reverse_iterator  operator+=(difference_type val) {return reverse_iterator(_element -= val);}
             reverse_iterator  operator-=(difference_type val) {return reverse_iterator(_element += val);}
 

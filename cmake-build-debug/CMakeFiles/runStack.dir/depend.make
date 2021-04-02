@@ -23,6 +23,7 @@ CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../google_test/googletest/inc
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../google_test/googletest/include/gtest/internal/gtest-string.h
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../google_test/googletest/include/gtest/internal/gtest-tuple.h
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../google_test/googletest/include/gtest/internal/gtest-type-util.h
+CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../includes/ft.h
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../includes/list.hpp
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../includes/stack.hpp
 CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../my_tests/stack_test.cpp

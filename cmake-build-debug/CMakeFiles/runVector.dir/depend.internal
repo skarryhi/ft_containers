@@ -24,5 +24,6 @@ CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o
  ../google_test/googletest/include/gtest/internal/gtest-string.h
  ../google_test/googletest/include/gtest/internal/gtest-tuple.h
  ../google_test/googletest/include/gtest/internal/gtest-type-util.h
- /Users/skarry/Desktop/ft_containers/includes/vector.hpp
- /Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp
+ /Users/skarry/Desktop/ok/includes/ft.h
+ /Users/skarry/Desktop/ok/includes/vector.hpp
+ /Users/skarry/Desktop/ok/my_tests/vector_test.cpp

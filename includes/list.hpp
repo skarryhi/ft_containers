@@ -1,17 +1,14 @@
-#ifndef LIST_HPP
-#define LIST_HPP
+#pragma once
 
 #include <memory>
 #include <iterator>
+#include "ft.h"
 
 namespace ft {
-    template<bool Cond, class T = void> struct enable_if {};
-    template<class T> struct enable_if<true, T> { typedef T type; };
     template <typename T, class Alloc = std::allocator<T> >
     class list {
     public:
 
-        //nickname
         class allocator;
         class iterator;
         class const_iterator;
@@ -612,6 +609,3 @@ namespace ft {
     template <class T, class Alloc>
     bool operator>= (const list<T,Alloc>& lhs, const list<T,Alloc>& rhs) {return lhs.size() >= rhs.size();}
 }
-
-
-#endif

@@ -1,13 +1,13 @@
-Start testing: Apr 02 12:23 MSK
+Start testing: Apr 02 17:33 MSK
 ----------------------------------------------------------
 1/5 Testing: runVector
 1/5 Test: runVector
-Command: "/Users/skarry/Desktop/ft_containers/cmake-build-debug/runVector"
-Directory: /Users/skarry/Desktop/ft_containers/cmake-build-debug
-"runVector" start time: Apr 02 12:23 MSK
+Command: "/Users/skarry/Desktop/ok/cmake-build-debug/runVector"
+Directory: /Users/skarry/Desktop/ok/cmake-build-debug
+"runVector" start time: Apr 02 17:33 MSK
 Output:
 ----------------------------------------------------------
-Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc
+Running main() from /Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc
 [==========] Running 28 tests from 28 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from ConstructorEmpty
@@ -23,7 +23,7 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 [----------] 1 test from ConstructorCopy
 [ RUN      ] ConstructorCopy.Vector
 [       OK ] ConstructorCopy.Vector (0 ms)
-[----------] 1 test from ConstructorCopy (1 ms total)
+[----------] 1 test from ConstructorCopy (0 ms total)
 
 [----------] 1 test from ConstructorIterators
 [ RUN      ] ConstructorIterators.Vector
@@ -151,24 +151,24 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 [----------] 1 test from RelationalOperators (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 28 tests from 28 test cases ran. (1 ms total)
+[==========] 28 tests from 28 test cases ran. (0 ms total)
 [  PASSED  ] 28 tests.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"runVector" end time: Apr 02 12:23 MSK
+"runVector" end time: Apr 02 17:33 MSK
 "runVector" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/5 Testing: runList
 2/5 Test: runList
-Command: "/Users/skarry/Desktop/ft_containers/cmake-build-debug/runList"
-Directory: /Users/skarry/Desktop/ft_containers/cmake-build-debug
-"runList" start time: Apr 02 12:23 MSK
+Command: "/Users/skarry/Desktop/ok/cmake-build-debug/runList"
+Directory: /Users/skarry/Desktop/ok/cmake-build-debug
+"runList" start time: Apr 02 17:33 MSK
 Output:
 ----------------------------------------------------------
-Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc
+Running main() from /Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc
 [==========] Running 32 tests from 32 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from ConstructorEmpty
@@ -204,7 +204,7 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 [----------] 1 test from Max_size
 [ RUN      ] Max_size.List
 [       OK ] Max_size.List (0 ms)
-[----------] 1 test from Max_size (1 ms total)
+[----------] 1 test from Max_size (0 ms total)
 
 [----------] 1 test from Empty
 [ RUN      ] Empty.List
@@ -303,8 +303,8 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 
 [----------] 1 test from SwapLists
 [ RUN      ] SwapLists.List
-[       OK ] SwapLists.List (0 ms)
-[----------] 1 test from SwapLists (0 ms total)
+[       OK ] SwapLists.List (1 ms)
+[----------] 1 test from SwapLists (1 ms total)
 
 [----------] 1 test from RelationalOperators
 [ RUN      ] RelationalOperators.List
@@ -335,21 +335,21 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 [==========] 32 tests from 32 test cases ran. (1 ms total)
 [  PASSED  ] 32 tests.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"runList" end time: Apr 02 12:23 MSK
+"runList" end time: Apr 02 17:33 MSK
 "runList" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/5 Testing: runStack
 3/5 Test: runStack
-Command: "/Users/skarry/Desktop/ft_containers/cmake-build-debug/runStack"
-Directory: /Users/skarry/Desktop/ft_containers/cmake-build-debug
-"runStack" start time: Apr 02 12:23 MSK
+Command: "/Users/skarry/Desktop/ok/cmake-build-debug/runStack"
+Directory: /Users/skarry/Desktop/ok/cmake-build-debug
+"runStack" start time: Apr 02 17:33 MSK
 Output:
 ----------------------------------------------------------
-Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc
+Running main() from /Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc
 [==========] Running 4 tests from 4 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from Constructor
@@ -379,18 +379,18 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"runStack" end time: Apr 02 12:23 MSK
+"runStack" end time: Apr 02 17:33 MSK
 "runStack" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/5 Testing: runQueue
 4/5 Test: runQueue
-Command: "/Users/skarry/Desktop/ft_containers/cmake-build-debug/runQueue"
-Directory: /Users/skarry/Desktop/ft_containers/cmake-build-debug
-"runQueue" start time: Apr 02 12:23 MSK
+Command: "/Users/skarry/Desktop/ok/cmake-build-debug/runQueue"
+Directory: /Users/skarry/Desktop/ok/cmake-build-debug
+"runQueue" start time: Apr 02 17:33 MSK
 Output:
 ----------------------------------------------------------
-Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc
+Running main() from /Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc
 [==========] Running 4 tests from 4 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from Constructor
@@ -420,18 +420,18 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"runQueue" end time: Apr 02 12:23 MSK
+"runQueue" end time: Apr 02 17:33 MSK
 "runQueue" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/5 Testing: runMap
 5/5 Test: runMap
-Command: "/Users/skarry/Desktop/ft_containers/cmake-build-debug/runMap"
-Directory: /Users/skarry/Desktop/ft_containers/cmake-build-debug
-"runMap" start time: Apr 02 12:23 MSK
+Command: "/Users/skarry/Desktop/ok/cmake-build-debug/runMap"
+Directory: /Users/skarry/Desktop/ok/cmake-build-debug
+"runMap" start time: Apr 02 17:33 MSK
 Output:
 ----------------------------------------------------------
-Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc
+Running main() from /Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc
 [==========] Running 11 tests from 11 test cases.
 [----------] Global test environment set-up.
 [----------] 1 test from SquareBrackets
@@ -490,14 +490,14 @@ Running main() from /Users/skarry/Desktop/ft_containers/google_test/googletest/s
 [----------] 1 test from Erase (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 11 tests from 11 test cases ran. (1 ms total)
+[==========] 11 tests from 11 test cases ran. (0 ms total)
 [  PASSED  ] 11 tests.
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"runMap" end time: Apr 02 12:23 MSK
+"runMap" end time: Apr 02 17:33 MSK
 "runMap" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Apr 02 12:23 MSK
+End testing: Apr 02 17:33 MSK

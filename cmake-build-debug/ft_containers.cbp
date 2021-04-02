@@ -8,44 +8,34 @@
 		<Option virtualFolders="CMake Files\;CMake Files\google_test\;CMake Files\google_test\googlemock\;CMake Files\google_test\googlemock\cmake\;CMake Files\google_test\googletest\;CMake Files\google_test\googletest\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runVector">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runVector" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runVector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -54,21 +44,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runVector"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runVector"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runVector/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runVector" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runVector" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -77,31 +67,31 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runVector/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runVector/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runMap">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runMap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runMap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -110,21 +100,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMap"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMap"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runMap/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runMap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runMap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -133,21 +123,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMap/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runMap/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runList">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runList" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runList" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -156,21 +146,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runList"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runList"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runList/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runList" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runList" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -179,85 +169,51 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runList/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runList/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="install/local">
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="test">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ft_containers">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/ft_containers" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_containers"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="ft_containers/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/ft_containers" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
-					<Add directory="/System/Library/Frameworks"/>
-					<Add directory="/Library/Frameworks"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 ft_containers/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runQueue">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runQueue" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runQueue" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -266,21 +222,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runQueue"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runQueue"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runQueue/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runQueue" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runQueue" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -289,31 +245,31 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runQueue/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runQueue/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runStack">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runStack" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runStack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -322,21 +278,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runStack"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runStack"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="runStack/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/runStack" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/runStack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -345,33 +301,33 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 runStack/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 runStack/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -380,23 +336,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/libgmockd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -405,23 +361,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -430,23 +386,23 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gmock_main/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/libgmock_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googlemock"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googlemock"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -455,21 +411,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -478,21 +434,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest_main/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/libgtest_maind.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -501,21 +457,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -524,21 +480,21 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="gtest/fast">
-				<Option output="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest"/>
+				<Option output="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/libgtestd.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest/include"/>
-					<Add directory="/Users/skarry/Desktop/ft_containers/google_test/googletest"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest/include"/>
+					<Add directory="/Users/skarry/Desktop/ok/google_test/googletest"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
@@ -547,87 +503,83 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ft_containers/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/skarry/Desktop/ok/cmake-build-debug/google_test/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googlemock/src/gmock-all.cc">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googlemock/src/gmock_main.cc">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googlemock/src/gmock_main.cc">
 			<Option target="gmock_main"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest-all.cc">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/src/gtest-all.cc">
 			<Option target="gtest"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/list.hpp">
+		<Unit filename="/Users/skarry/Desktop/ok/includes/list.hpp">
 			<Option target="runList"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/map.hpp">
+		<Unit filename="/Users/skarry/Desktop/ok/includes/map.hpp">
 			<Option target="runMap"/>
-			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/queue.hpp">
+		<Unit filename="/Users/skarry/Desktop/ok/includes/queue.hpp">
 			<Option target="runQueue"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/stack.hpp">
+		<Unit filename="/Users/skarry/Desktop/ok/includes/stack.hpp">
 			<Option target="runStack"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/vector.hpp">
+		<Unit filename="/Users/skarry/Desktop/ok/includes/vector.hpp">
 			<Option target="runVector"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/main.cpp">
-			<Option target="ft_containers"/>
-		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ok/my_tests/list_test.cpp">
 			<Option target="runList"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ok/my_tests/map_test.cpp">
 			<Option target="runMap"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/queue_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ok/my_tests/queue_test.cpp">
 			<Option target="runQueue"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/stack_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ok/my_tests/stack_test.cpp">
 			<Option target="runStack"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ok/my_tests/vector_test.cpp">
 			<Option target="runVector"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/CMakeLists.txt">
+		<Unit filename="/Users/skarry/Desktop/ok/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/CMakeLists.txt">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\google_test\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googlemock/CMakeLists.txt">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googlemock/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\google_test\googlemock\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googlemock/cmake/gmock.pc.in">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googlemock/cmake/gmock.pc.in">
 			<Option virtualFolder="CMake Files\google_test\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googlemock/cmake/gmock_main.pc.in">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googlemock/cmake/gmock_main.pc.in">
 			<Option virtualFolder="CMake Files\google_test\googlemock\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/CMakeLists.txt">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\google_test\googletest\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/cmake/Config.cmake.in">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/cmake/Config.cmake.in">
 			<Option virtualFolder="CMake Files\google_test\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/cmake/gtest.pc.in">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/cmake/gtest.pc.in">
 			<Option virtualFolder="CMake Files\google_test\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/cmake/gtest_main.pc.in">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/cmake/gtest_main.pc.in">
 			<Option virtualFolder="CMake Files\google_test\googletest\cmake\"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/cmake/internal_utils.cmake">
+		<Unit filename="/Users/skarry/Desktop/ok/google_test/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\google_test\googletest\cmake\"/>
 		</Unit>
 	</Project>

@@ -33,4 +33,4 @@ add_executable(runMap my_tests/map_test.cpp includes/map.hpp)
 target_link_libraries(runMap -Wall -Wextra -Werror gtest gtest_main)
 add_test( runMap runMap)
 
-add_executable(ft_containers main.cpp includes/map.hpp)
+#add_executable(ft_containers main.cpp includes/map.hpp)
