@@ -77,27 +77,27 @@ include CMakeFiles/runList.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runList.dir/flags.make
 
-CMakeFiles/runList.dir/list_test.cpp.o: CMakeFiles/runList.dir/flags.make
-CMakeFiles/runList.dir/list_test.cpp.o: ../list_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runList.dir/list_test.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runList.dir/list_test.cpp.o -c /Users/skarry/Desktop/ft_containers/list_test.cpp
+CMakeFiles/runList.dir/my_tests/list_test.cpp.o: CMakeFiles/runList.dir/flags.make
+CMakeFiles/runList.dir/my_tests/list_test.cpp.o: ../my_tests/list_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runList.dir/my_tests/list_test.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runList.dir/my_tests/list_test.cpp.o -c /Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp
 
-CMakeFiles/runList.dir/list_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runList.dir/list_test.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/list_test.cpp > CMakeFiles/runList.dir/list_test.cpp.i
+CMakeFiles/runList.dir/my_tests/list_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runList.dir/my_tests/list_test.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp > CMakeFiles/runList.dir/my_tests/list_test.cpp.i
 
-CMakeFiles/runList.dir/list_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runList.dir/list_test.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/list_test.cpp -o CMakeFiles/runList.dir/list_test.cpp.s
+CMakeFiles/runList.dir/my_tests/list_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runList.dir/my_tests/list_test.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp -o CMakeFiles/runList.dir/my_tests/list_test.cpp.s
 
 # Object files for target runList
 runList_OBJECTS = \
-"CMakeFiles/runList.dir/list_test.cpp.o"
+"CMakeFiles/runList.dir/my_tests/list_test.cpp.o"
 
 # External object files for target runList
 runList_EXTERNAL_OBJECTS =
 
-runList: CMakeFiles/runList.dir/list_test.cpp.o
+runList: CMakeFiles/runList.dir/my_tests/list_test.cpp.o
 runList: CMakeFiles/runList.dir/build.make
 runList: google_test/googlemock/gtest/libgtestd.a
 runList: google_test/googlemock/gtest/libgtest_maind.a

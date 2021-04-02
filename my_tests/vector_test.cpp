@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "vector.hpp"
+#include "../includes/vector.hpp"
 #include <vector>
 
 TEST(ConstructorEmpty, Vector) {

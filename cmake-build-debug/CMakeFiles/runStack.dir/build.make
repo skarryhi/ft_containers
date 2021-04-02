@@ -77,27 +77,27 @@ include CMakeFiles/runStack.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runStack.dir/flags.make
 
-CMakeFiles/runStack.dir/stack_test.cpp.o: CMakeFiles/runStack.dir/flags.make
-CMakeFiles/runStack.dir/stack_test.cpp.o: ../stack_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runStack.dir/stack_test.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runStack.dir/stack_test.cpp.o -c /Users/skarry/Desktop/ft_containers/stack_test.cpp
+CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: CMakeFiles/runStack.dir/flags.make
+CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o: ../my_tests/stack_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o -c /Users/skarry/Desktop/ft_containers/my_tests/stack_test.cpp
 
-CMakeFiles/runStack.dir/stack_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runStack.dir/stack_test.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/stack_test.cpp > CMakeFiles/runStack.dir/stack_test.cpp.i
+CMakeFiles/runStack.dir/my_tests/stack_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runStack.dir/my_tests/stack_test.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/my_tests/stack_test.cpp > CMakeFiles/runStack.dir/my_tests/stack_test.cpp.i
 
-CMakeFiles/runStack.dir/stack_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runStack.dir/stack_test.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/stack_test.cpp -o CMakeFiles/runStack.dir/stack_test.cpp.s
+CMakeFiles/runStack.dir/my_tests/stack_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runStack.dir/my_tests/stack_test.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/my_tests/stack_test.cpp -o CMakeFiles/runStack.dir/my_tests/stack_test.cpp.s
 
 # Object files for target runStack
 runStack_OBJECTS = \
-"CMakeFiles/runStack.dir/stack_test.cpp.o"
+"CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o"
 
 # External object files for target runStack
 runStack_EXTERNAL_OBJECTS =
 
-runStack: CMakeFiles/runStack.dir/stack_test.cpp.o
+runStack: CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o
 runStack: CMakeFiles/runStack.dir/build.make
 runStack: google_test/googlemock/gtest/libgtestd.a
 runStack: google_test/googlemock/gtest/libgtest_maind.a

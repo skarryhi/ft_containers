@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "stack.hpp"
+#include "../includes/stack.hpp"
 #include <stack>
 
 TEST(Constructor, Stack) {

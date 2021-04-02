@@ -1,15 +1,6 @@
 #include "gtest/gtest.h"
-#include "map.hpp"
+#include "../includes/map.hpp"
 #include <map>
-
-TEST(ConstructorEmpty, Map) {
-    ft::map<int, int> my_map;
-    std::map<int, int> def_map;
-
-    ASSERT_EQ(my_map.size(), def_map.size());
-//    ASSERT_EQ(my_map.max_size(), def_map.max_size());
-    ASSERT_EQ(my_map.empty(), def_map.empty());
-}
 
 TEST(SquareBrackets, Map) {
     ft::map<int, int> my_map;
@@ -135,7 +126,41 @@ TEST(InsertPosition, Map) {
 }
 
 TEST(Swap, Map) {
+    ft::map<char,int> my_map, my_map2;
+    std::map<char,int> def_map, def_map2;
 
+    my_map['x']=100;
+    my_map['y']=200;
+    def_map['x']=100;
+    def_map['y']=200;
+
+    my_map2['a']=11;
+    my_map2['b']=22;
+    my_map2['c']=33;
+    def_map2['a']=11;
+    def_map2['b']=22;
+    def_map2['c']=33;
+
+    my_map.swap(my_map2);
+    def_map.swap(def_map2);
+
+    ft::map<char, int>::iterator my_it = my_map.begin();
+    std::map<char, int>::iterator def_it = def_map.begin();
+    ASSERT_EQ(def_map.size(), my_map.size());
+    while (def_it != def_map.end()) {
+        ASSERT_EQ(my_it->first, def_it->first);
+        ++def_it;
+        ++my_it;
+    }
+
+    my_it = my_map2.begin();
+    def_it = def_map2.begin();
+    ASSERT_EQ(def_map2.size(), my_map2.size());
+    while (def_it != def_map2.end()) {
+        ASSERT_EQ(my_it->first, def_it->first);
+        ++def_it;
+        ++my_it;
+    }
 }
 
 TEST(Key_comp, Map) {
@@ -280,6 +305,7 @@ TEST(Erase, Map) {
     def_map['d']=40;
     def_map['e']=50;
     def_map['f']=60;
+
 
     my_it = my_map.find('b');
     my_map.erase (my_it);

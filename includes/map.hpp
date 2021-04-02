@@ -15,7 +15,6 @@ namespace ft {
             class Alloc = std::allocator<std::pair<const Key, T> > >
     class map {
     public:
-        //nickname
         class allocator;
         class pair;
         class iterator;
@@ -60,7 +59,6 @@ namespace ft {
         node *_end;
         struct Node *_root;
 
-
         node  *newEmptyNode() {
             node  *newNode = _allocator_rebind.allocate(1);
             newNode->parent = nullptr;
@@ -88,35 +86,52 @@ namespace ft {
             --_size;
         }
 
+        void    deleteEmptyNode(node * const oldNode) {
+            _allocator_rebind.deallocate(oldNode, 1);
+        }
+
     public:
 
         explicit map (const key_compare& comp = key_compare(),
-                      const allocator_type& alloc = allocator_type()) : _size(0), _compare(comp), _alloc(alloc) {
+                      const allocator_type& alloc = allocator_type()) : _compare(comp), _alloc(alloc), _size(0) {
             _begin = newEmptyNode();
             _end = newEmptyNode();
             _root = _begin;
+            _begin->parent = _end;
         }
 
         template <class InputIterator>
         map (InputIterator first, InputIterator last, const key_compare& comp = key_compare(),
-             const allocator_type& alloc = allocator_type()) : _size(0), _compare(comp), _alloc(alloc) {
+             const allocator_type& alloc = allocator_type()) : _compare(comp), _alloc(alloc), _size(0) {
+            _begin = newEmptyNode();
+            _end = newEmptyNode();
+            _root = _begin;
+            _begin->parent = _end;
             while (first != last) {
                 insert(*first);
                 ++first;
             }
         }
-        map (const map& x) : _size(0) {*this = x;}
+        map (const map& x) : _size(0) {
+            _begin = newEmptyNode();
+            _end = newEmptyNode();
+            _root = _begin;
+            _begin->parent = _end;
+            *this = x;
+        }
 
-//        ~map() {} TODO
+        ~map() {
+            clear();
+            deleteEmptyNode(_begin);
+            deleteEmptyNode(_end);
+        } //TODO
 
         map& operator= (const map& x) {
-            //clear() then clear is will be ready
+            clear(); // then clear is will be ready
             _compare = x._compare;
             _alloc = x._alloc;
-            _begin->parent = nullptr;
-            _end->parent = nullptr;
-            _root = _begin;
             insert(x.begin(), x.end());
+            return *this;
         }
 
         bool empty() const { return !_size;}
@@ -288,11 +303,11 @@ namespace ft {
                         tmp->parent->left = nullptr;
                 }
             }
-            else if (!tmp->parent) { // if have NOT parent
+            else if (!tmp->parent) { // if have NOT parent(root)
                 if (tmp->right == _end) {
                     if (tmp->left == _begin) {
                         _end->parent = nullptr;
-                        _begin->parent = nullptr;
+                        _begin->parent = _end;
                         _root = _begin;
                     }
                     else {
@@ -332,8 +347,10 @@ namespace ft {
         }
 
         size_type erase (const key_type& k) {
+            size_type oldSize = size();
             iterator it = find(k);
             erase(it);
+            return oldSize - size();
         }
 
         void erase (iterator first, iterator last) {
@@ -342,7 +359,7 @@ namespace ft {
                 iterators.push_back(first);
                 ++first;
             }
-            for (int i = 0; i < iterators.size(); i++) {
+            for (size_type i = 0; i < iterators.size(); i++) {
                 erase(iterators[i]);
             }
         }

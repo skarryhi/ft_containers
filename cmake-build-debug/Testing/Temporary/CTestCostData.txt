@@ -1,5 +1,6 @@
-runVector 11 0.00205876
-runList 11 0.000378277
-runStack 5 0.000883303
-runQueue 2 0.0152517
+runVector 12 0.000325971
+runList 12 0.000332459
+runStack 6 0.000485284
+runQueue 3 0.000976069
+runMap 14 0.000325615
 ---

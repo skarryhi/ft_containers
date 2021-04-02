@@ -3,7 +3,7 @@
 //
 
 #include "gtest/gtest.h"
-#include "list.hpp"
+#include "../includes/list.hpp"
 #include <list>
 
 TEST(ConstructorEmpty, List) {

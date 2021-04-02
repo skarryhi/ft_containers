@@ -2,32 +2,28 @@
 // Created by Saturn Karry on 3/24/21.
 //
 
-#include "map.hpp"
+#include "includes/map.hpp"
 #include <map>
 #include <iostream>
 
 int main() {
-    ft::map<char,int> mymap;
-    ft::map<char,int>::iterator it;
+    ft::map<char,int> foo,bar;
 
-    // insert some values:
-    mymap['a']=10;
-    mymap['b']=20;
-    mymap['c']=30;
-    mymap['d']=40;
-    mymap['e']=50;
-    mymap['f']=60;
+    foo['x']=100;
+    foo['y']=200;
 
-    it=mymap.find('b');
-    mymap.erase (it);                   // erasing by iterator
+    bar['a']=11;
+    bar['b']=22;
+    bar['c']=33;
 
-    mymap.erase ('c');                  // erasing by key
+    foo.swap(bar);
 
-    it=mymap.find ('e');
-    mymap.erase ( it, mymap.end() );    // erasing by range
+    std::cout << "foo contains:\n";
+    for (ft::map<char,int>::iterator it=foo.begin(); it!=foo.end(); ++it)
+        std::cout << it->first << " => " << it->second << '\n';
 
-    // show content:
-    for (it=mymap.begin(); it!=mymap.end(); ++it)
+    std::cout << "bar contains:\n";
+    for (ft::map<char,int>::iterator it=bar.begin(); it!=bar.end(); ++it)
         std::cout << it->first << " => " << it->second << '\n';
 
     return 0;

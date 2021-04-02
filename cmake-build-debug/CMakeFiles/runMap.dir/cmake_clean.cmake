@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/runMap.dir/map_test.cpp.o"
+  "CMakeFiles/runMap.dir/my_tests/map_test.cpp.o"
   "runMap"
   "runMap.pdb"
 )

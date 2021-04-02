@@ -566,38 +566,38 @@
 		<Unit filename="/Users/skarry/Desktop/ft_containers/google_test/googletest/src/gtest_main.cc">
 			<Option target="gtest_main"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/list.hpp">
+		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/list.hpp">
 			<Option target="runList"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/list_test.cpp">
-			<Option target="runList"/>
+		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/map.hpp">
+			<Option target="runMap"/>
+			<Option target="ft_containers"/>
+		</Unit>
+		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/queue.hpp">
+			<Option target="runQueue"/>
+		</Unit>
+		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/stack.hpp">
+			<Option target="runStack"/>
+		</Unit>
+		<Unit filename="/Users/skarry/Desktop/ft_containers/includes/vector.hpp">
+			<Option target="runVector"/>
 		</Unit>
 		<Unit filename="/Users/skarry/Desktop/ft_containers/main.cpp">
 			<Option target="ft_containers"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/map.hpp">
-			<Option target="runMap"/>
-			<Option target="ft_containers"/>
+		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp">
+			<Option target="runList"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/map_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp">
 			<Option target="runMap"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/queue.hpp">
+		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/queue_test.cpp">
 			<Option target="runQueue"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/queue_test.cpp">
-			<Option target="runQueue"/>
-		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/stack.hpp">
+		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/stack_test.cpp">
 			<Option target="runStack"/>
 		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/stack_test.cpp">
-			<Option target="runStack"/>
-		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/vector.hpp">
-			<Option target="runVector"/>
-		</Unit>
-		<Unit filename="/Users/skarry/Desktop/ft_containers/vector_test.cpp">
+		<Unit filename="/Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp">
 			<Option target="runVector"/>
 		</Unit>
 		<Unit filename="/Users/skarry/Desktop/ft_containers/CMakeLists.txt">

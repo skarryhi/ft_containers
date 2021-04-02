@@ -77,27 +77,27 @@ include CMakeFiles/runVector.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runVector.dir/flags.make
 
-CMakeFiles/runVector.dir/vector_test.cpp.o: CMakeFiles/runVector.dir/flags.make
-CMakeFiles/runVector.dir/vector_test.cpp.o: ../vector_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runVector.dir/vector_test.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runVector.dir/vector_test.cpp.o -c /Users/skarry/Desktop/ft_containers/vector_test.cpp
+CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o: CMakeFiles/runVector.dir/flags.make
+CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o: ../my_tests/vector_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o -c /Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp
 
-CMakeFiles/runVector.dir/vector_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runVector.dir/vector_test.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/vector_test.cpp > CMakeFiles/runVector.dir/vector_test.cpp.i
+CMakeFiles/runVector.dir/my_tests/vector_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runVector.dir/my_tests/vector_test.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp > CMakeFiles/runVector.dir/my_tests/vector_test.cpp.i
 
-CMakeFiles/runVector.dir/vector_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runVector.dir/vector_test.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/vector_test.cpp -o CMakeFiles/runVector.dir/vector_test.cpp.s
+CMakeFiles/runVector.dir/my_tests/vector_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runVector.dir/my_tests/vector_test.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/my_tests/vector_test.cpp -o CMakeFiles/runVector.dir/my_tests/vector_test.cpp.s
 
 # Object files for target runVector
 runVector_OBJECTS = \
-"CMakeFiles/runVector.dir/vector_test.cpp.o"
+"CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o"
 
 # External object files for target runVector
 runVector_EXTERNAL_OBJECTS =
 
-runVector: CMakeFiles/runVector.dir/vector_test.cpp.o
+runVector: CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o
 runVector: CMakeFiles/runVector.dir/build.make
 runVector: google_test/googlemock/gtest/libgtestd.a
 runVector: google_test/googlemock/gtest/libgtest_maind.a

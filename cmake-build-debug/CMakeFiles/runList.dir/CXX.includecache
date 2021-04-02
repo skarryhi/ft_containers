@@ -286,17 +286,17 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/Users/skarry/Desktop/ft_containers/list.hpp
+/Users/skarry/Desktop/ft_containers/includes/list.hpp
 memory
 -
 iterator
 -
 
-/Users/skarry/Desktop/ft_containers/list_test.cpp
+/Users/skarry/Desktop/ft_containers/my_tests/list_test.cpp
 gtest/gtest.h
-/Users/skarry/Desktop/ft_containers/gtest/gtest.h
-list.hpp
-/Users/skarry/Desktop/ft_containers/list.hpp
+/Users/skarry/Desktop/ft_containers/my_tests/gtest/gtest.h
+../includes/list.hpp
+/Users/skarry/Desktop/ft_containers/includes/list.hpp
 list
 -
 

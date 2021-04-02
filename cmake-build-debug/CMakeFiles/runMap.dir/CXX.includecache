@@ -286,7 +286,7 @@ cxxabi.h
 acxx_demangle.h
 -
 
-/Users/skarry/Desktop/ft_containers/map.hpp
+/Users/skarry/Desktop/ft_containers/includes/map.hpp
 iostream
 -
 memory
@@ -294,21 +294,21 @@ memory
 iterator
 -
 vector.hpp
-/Users/skarry/Desktop/ft_containers/vector.hpp
+/Users/skarry/Desktop/ft_containers/includes/vector.hpp
 
-/Users/skarry/Desktop/ft_containers/map_test.cpp
-gtest/gtest.h
-/Users/skarry/Desktop/ft_containers/gtest/gtest.h
-map.hpp
-/Users/skarry/Desktop/ft_containers/map.hpp
-map
--
-
-/Users/skarry/Desktop/ft_containers/vector.hpp
+/Users/skarry/Desktop/ft_containers/includes/vector.hpp
 iostream
 -
 memory
 -
 iterator
+-
+
+/Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp
+gtest/gtest.h
+/Users/skarry/Desktop/ft_containers/my_tests/gtest/gtest.h
+../includes/map.hpp
+/Users/skarry/Desktop/ft_containers/includes/map.hpp
+map
 -
 

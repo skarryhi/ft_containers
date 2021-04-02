@@ -317,33 +317,6 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f google_test/googlemock/gtest/CMakeFiles/gtest.dir/build.make google_test/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-list_test.o: list_test.cpp.o
-
-.PHONY : list_test.o
-
-# target to build an object file
-list_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.o
-.PHONY : list_test.cpp.o
-
-list_test.i: list_test.cpp.i
-
-.PHONY : list_test.i
-
-# target to preprocess a source file
-list_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.i
-.PHONY : list_test.cpp.i
-
-list_test.s: list_test.cpp.s
-
-.PHONY : list_test.s
-
-# target to generate assembly for a file
-list_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/list_test.cpp.s
-.PHONY : list_test.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -371,113 +344,140 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ft_containers.dir/build.make CMakeFiles/ft_containers.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-map_test.o: map_test.cpp.o
+my_tests/list_test.o: my_tests/list_test.cpp.o
 
-.PHONY : map_test.o
-
-# target to build an object file
-map_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.o
-.PHONY : map_test.cpp.o
-
-map_test.i: map_test.cpp.i
-
-.PHONY : map_test.i
-
-# target to preprocess a source file
-map_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.i
-.PHONY : map_test.cpp.i
-
-map_test.s: map_test.cpp.s
-
-.PHONY : map_test.s
-
-# target to generate assembly for a file
-map_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/map_test.cpp.s
-.PHONY : map_test.cpp.s
-
-queue_test.o: queue_test.cpp.o
-
-.PHONY : queue_test.o
+.PHONY : my_tests/list_test.o
 
 # target to build an object file
-queue_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.o
-.PHONY : queue_test.cpp.o
+my_tests/list_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/my_tests/list_test.cpp.o
+.PHONY : my_tests/list_test.cpp.o
 
-queue_test.i: queue_test.cpp.i
+my_tests/list_test.i: my_tests/list_test.cpp.i
 
-.PHONY : queue_test.i
+.PHONY : my_tests/list_test.i
 
 # target to preprocess a source file
-queue_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.i
-.PHONY : queue_test.cpp.i
+my_tests/list_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/my_tests/list_test.cpp.i
+.PHONY : my_tests/list_test.cpp.i
 
-queue_test.s: queue_test.cpp.s
+my_tests/list_test.s: my_tests/list_test.cpp.s
 
-.PHONY : queue_test.s
+.PHONY : my_tests/list_test.s
 
 # target to generate assembly for a file
-queue_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/queue_test.cpp.s
-.PHONY : queue_test.cpp.s
+my_tests/list_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runList.dir/build.make CMakeFiles/runList.dir/my_tests/list_test.cpp.s
+.PHONY : my_tests/list_test.cpp.s
 
-stack_test.o: stack_test.cpp.o
+my_tests/map_test.o: my_tests/map_test.cpp.o
 
-.PHONY : stack_test.o
+.PHONY : my_tests/map_test.o
 
 # target to build an object file
-stack_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.o
-.PHONY : stack_test.cpp.o
+my_tests/map_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/my_tests/map_test.cpp.o
+.PHONY : my_tests/map_test.cpp.o
 
-stack_test.i: stack_test.cpp.i
+my_tests/map_test.i: my_tests/map_test.cpp.i
 
-.PHONY : stack_test.i
+.PHONY : my_tests/map_test.i
 
 # target to preprocess a source file
-stack_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.i
-.PHONY : stack_test.cpp.i
+my_tests/map_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/my_tests/map_test.cpp.i
+.PHONY : my_tests/map_test.cpp.i
 
-stack_test.s: stack_test.cpp.s
+my_tests/map_test.s: my_tests/map_test.cpp.s
 
-.PHONY : stack_test.s
+.PHONY : my_tests/map_test.s
 
 # target to generate assembly for a file
-stack_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/stack_test.cpp.s
-.PHONY : stack_test.cpp.s
+my_tests/map_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runMap.dir/build.make CMakeFiles/runMap.dir/my_tests/map_test.cpp.s
+.PHONY : my_tests/map_test.cpp.s
 
-vector_test.o: vector_test.cpp.o
+my_tests/queue_test.o: my_tests/queue_test.cpp.o
 
-.PHONY : vector_test.o
+.PHONY : my_tests/queue_test.o
 
 # target to build an object file
-vector_test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/vector_test.cpp.o
-.PHONY : vector_test.cpp.o
+my_tests/queue_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/my_tests/queue_test.cpp.o
+.PHONY : my_tests/queue_test.cpp.o
 
-vector_test.i: vector_test.cpp.i
+my_tests/queue_test.i: my_tests/queue_test.cpp.i
 
-.PHONY : vector_test.i
+.PHONY : my_tests/queue_test.i
 
 # target to preprocess a source file
-vector_test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/vector_test.cpp.i
-.PHONY : vector_test.cpp.i
+my_tests/queue_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/my_tests/queue_test.cpp.i
+.PHONY : my_tests/queue_test.cpp.i
 
-vector_test.s: vector_test.cpp.s
+my_tests/queue_test.s: my_tests/queue_test.cpp.s
 
-.PHONY : vector_test.s
+.PHONY : my_tests/queue_test.s
 
 # target to generate assembly for a file
-vector_test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/vector_test.cpp.s
-.PHONY : vector_test.cpp.s
+my_tests/queue_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runQueue.dir/build.make CMakeFiles/runQueue.dir/my_tests/queue_test.cpp.s
+.PHONY : my_tests/queue_test.cpp.s
+
+my_tests/stack_test.o: my_tests/stack_test.cpp.o
+
+.PHONY : my_tests/stack_test.o
+
+# target to build an object file
+my_tests/stack_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/my_tests/stack_test.cpp.o
+.PHONY : my_tests/stack_test.cpp.o
+
+my_tests/stack_test.i: my_tests/stack_test.cpp.i
+
+.PHONY : my_tests/stack_test.i
+
+# target to preprocess a source file
+my_tests/stack_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/my_tests/stack_test.cpp.i
+.PHONY : my_tests/stack_test.cpp.i
+
+my_tests/stack_test.s: my_tests/stack_test.cpp.s
+
+.PHONY : my_tests/stack_test.s
+
+# target to generate assembly for a file
+my_tests/stack_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runStack.dir/build.make CMakeFiles/runStack.dir/my_tests/stack_test.cpp.s
+.PHONY : my_tests/stack_test.cpp.s
+
+my_tests/vector_test.o: my_tests/vector_test.cpp.o
+
+.PHONY : my_tests/vector_test.o
+
+# target to build an object file
+my_tests/vector_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/my_tests/vector_test.cpp.o
+.PHONY : my_tests/vector_test.cpp.o
+
+my_tests/vector_test.i: my_tests/vector_test.cpp.i
+
+.PHONY : my_tests/vector_test.i
+
+# target to preprocess a source file
+my_tests/vector_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/my_tests/vector_test.cpp.i
+.PHONY : my_tests/vector_test.cpp.i
+
+my_tests/vector_test.s: my_tests/vector_test.cpp.s
+
+.PHONY : my_tests/vector_test.s
+
+# target to generate assembly for a file
+my_tests/vector_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/runVector.dir/build.make CMakeFiles/runVector.dir/my_tests/vector_test.cpp.s
+.PHONY : my_tests/vector_test.cpp.s
 
 # Help Target
 help:
@@ -502,24 +502,24 @@ help:
 	@echo "... runQueue"
 	@echo "... runStack"
 	@echo "... runVector"
-	@echo "... list_test.o"
-	@echo "... list_test.i"
-	@echo "... list_test.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... map_test.o"
-	@echo "... map_test.i"
-	@echo "... map_test.s"
-	@echo "... queue_test.o"
-	@echo "... queue_test.i"
-	@echo "... queue_test.s"
-	@echo "... stack_test.o"
-	@echo "... stack_test.i"
-	@echo "... stack_test.s"
-	@echo "... vector_test.o"
-	@echo "... vector_test.i"
-	@echo "... vector_test.s"
+	@echo "... my_tests/list_test.o"
+	@echo "... my_tests/list_test.i"
+	@echo "... my_tests/list_test.s"
+	@echo "... my_tests/map_test.o"
+	@echo "... my_tests/map_test.i"
+	@echo "... my_tests/map_test.s"
+	@echo "... my_tests/queue_test.o"
+	@echo "... my_tests/queue_test.i"
+	@echo "... my_tests/queue_test.s"
+	@echo "... my_tests/stack_test.o"
+	@echo "... my_tests/stack_test.i"
+	@echo "... my_tests/stack_test.s"
+	@echo "... my_tests/vector_test.o"
+	@echo "... my_tests/vector_test.i"
+	@echo "... my_tests/vector_test.s"
 .PHONY : help
 
 

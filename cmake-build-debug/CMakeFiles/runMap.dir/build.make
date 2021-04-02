@@ -77,27 +77,27 @@ include CMakeFiles/runMap.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runMap.dir/flags.make
 
-CMakeFiles/runMap.dir/map_test.cpp.o: CMakeFiles/runMap.dir/flags.make
-CMakeFiles/runMap.dir/map_test.cpp.o: ../map_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runMap.dir/map_test.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runMap.dir/map_test.cpp.o -c /Users/skarry/Desktop/ft_containers/map_test.cpp
+CMakeFiles/runMap.dir/my_tests/map_test.cpp.o: CMakeFiles/runMap.dir/flags.make
+CMakeFiles/runMap.dir/my_tests/map_test.cpp.o: ../my_tests/map_test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/skarry/Desktop/ft_containers/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runMap.dir/my_tests/map_test.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runMap.dir/my_tests/map_test.cpp.o -c /Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp
 
-CMakeFiles/runMap.dir/map_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runMap.dir/map_test.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/map_test.cpp > CMakeFiles/runMap.dir/map_test.cpp.i
+CMakeFiles/runMap.dir/my_tests/map_test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runMap.dir/my_tests/map_test.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp > CMakeFiles/runMap.dir/my_tests/map_test.cpp.i
 
-CMakeFiles/runMap.dir/map_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runMap.dir/map_test.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/map_test.cpp -o CMakeFiles/runMap.dir/map_test.cpp.s
+CMakeFiles/runMap.dir/my_tests/map_test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runMap.dir/my_tests/map_test.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/skarry/Desktop/ft_containers/my_tests/map_test.cpp -o CMakeFiles/runMap.dir/my_tests/map_test.cpp.s
 
 # Object files for target runMap
 runMap_OBJECTS = \
-"CMakeFiles/runMap.dir/map_test.cpp.o"
+"CMakeFiles/runMap.dir/my_tests/map_test.cpp.o"
 
 # External object files for target runMap
 runMap_EXTERNAL_OBJECTS =
 
-runMap: CMakeFiles/runMap.dir/map_test.cpp.o
+runMap: CMakeFiles/runMap.dir/my_tests/map_test.cpp.o
 runMap: CMakeFiles/runMap.dir/build.make
 runMap: google_test/googlemock/gtest/libgtestd.a
 runMap: google_test/googlemock/gtest/libgtest_maind.a
