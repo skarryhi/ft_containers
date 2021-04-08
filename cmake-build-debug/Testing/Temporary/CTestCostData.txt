@@ -1,7 +1,8 @@
-runVector 21 0.00178153
-runList 21 0.00178674
-runStack 15 0.00178559
-runQueue 12 0.00233884
-runMap 25 0.00133573
+runVector 29 0.000165694
+runList 29 0.00449322
+runStack 23 0.00013282
+runQueue 20 0.00170225
+runMap 33 0.0012228
 ft_containers 0 0
+runMain 0 0
 ---

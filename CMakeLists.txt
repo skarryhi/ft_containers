@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.17)
 project(ft_containers)
-
+#add_compile_options(-Wall -Wextra -Werror -Wconversion -Wno-unused)
 
 ################################
 # GTest
@@ -30,7 +30,7 @@ target_link_libraries(runQueue gtest gtest_main)
 add_test( runQueue runQueue)
 
 add_executable(runMap my_tests/map_test.cpp includes/map.hpp)
-target_link_libraries(runMap -Wall -Wextra -Werror gtest gtest_main)
+target_link_libraries(runMap gtest gtest_main)
 add_test( runMap runMap)
 
-add_executable(ft_containers main.cpp includes/map.hpp)
+add_executable(ft_containers main.cpp)

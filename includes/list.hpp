@@ -164,7 +164,7 @@ namespace ft {
 
         iterator erase (iterator first, iterator last) {
             iterator resList;
-            while (first != last) {
+            while (first != last && first.getElement() != nullptr) {
                 resList = erase(first);
                 first++;
             }
@@ -191,7 +191,9 @@ namespace ft {
             }
         }
 
-        void clear() {erase(this->begin(), this->end());}
+        void clear() {
+            erase(this->begin(), this->end());
+        }
 
         //Capacity
         bool empty() const {return !_size;}

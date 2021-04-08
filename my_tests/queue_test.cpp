@@ -53,5 +53,5 @@ TEST(RelationalOperators, Queue) {
     ASSERT_EQ((default_queue<=default_queue2), (my_queue<=my_queue2));
     ASSERT_EQ((default_queue>default_queue2), (my_queue>my_queue2));
     ASSERT_EQ((default_queue<default_queue2), (my_queue<my_queue2));
-     while(1) {}
+//     while(1) {}
 }

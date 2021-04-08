@@ -374,6 +374,21 @@ TEST(Clear, List) {
     my_list.clear();
 
     ASSERT_EQ(def_list.size(), my_list.size());
+
+    for (size_t i = 0; i < 40; i++) {
+        def_list.push_back(i);
+        my_list.push_back(i);
+    }
+
+    std::list<int>::iterator check_def_it = def_list.begin();
+    ft::list<int>::iterator check_my_it = my_list.begin();
+    for (size_t i = 0; i < def_list.size(); i++) {
+        ASSERT_EQ(*check_my_it, *check_def_it);
+        ++check_my_it;
+        ++check_def_it;
+    }
+
+    ASSERT_EQ(def_list.size(), my_list.size());
 }
 
 TEST(Splise, List) {
@@ -770,5 +785,5 @@ TEST(ConstReverseIterator, List) {
     --ite;
     --def_ite;
     ASSERT_EQ(*ite, *def_ite);
-     while(1) {}
+//     while(1) {}
 }

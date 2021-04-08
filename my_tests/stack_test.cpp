@@ -52,5 +52,5 @@ TEST(RelationalOperators, Stack) {
     ASSERT_EQ((default_stack<=default_stack2), (my_stack<=my_stack2));
     ASSERT_EQ((default_stack>default_stack2), (my_stack>my_stack2));
     ASSERT_EQ((default_stack<default_stack2), (my_stack<my_stack2));
-     while(1) {}
+//     while(1) {}
 }

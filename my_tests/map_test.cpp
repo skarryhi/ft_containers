@@ -2,6 +2,73 @@
 #include "../includes/map.hpp"
 #include <map>
 
+TEST(Constructors, Map) {
+    ft::map<char, char> my_map;
+    std::map<char, char> def_map;
+
+    my_map['o'] = 'o';
+    my_map['f'] = 'f';
+    def_map['o'] = 'o';
+    def_map['f'] = 'f';
+
+    ft::map<char, char> my_map2(my_map);
+    std::map<char, char> def_map2(def_map);
+
+    ft::map<char, char> my_map3(my_map2.begin(), my_map2.end());
+    std::map<char, char> def_map3(def_map2.begin(), def_map2.end());
+
+    ft::map<char, char>::iterator my_it = my_map3.begin();
+    std::map<char, char>::iterator def_it = def_map3.begin();
+    ASSERT_EQ(my_it->second, def_it->second);
+    while (def_it != def_map3.end()) {
+        ASSERT_EQ(my_it->first, def_it->first);
+        ASSERT_EQ(def_map3.size(), my_map3.size());
+        ++def_it;
+        ++my_it;
+    }
+}
+
+TEST(AsignationOperator, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> def_map;
+
+    for (size_t i = 0; i < 100; i++) {
+        my_map.insert(std::make_pair(i, i));
+        def_map.insert(std::make_pair(i, i));
+    }
+
+    ft::map<int, int> my_map2 = my_map;
+    std::map<int, int> def_map2 = def_map;
+
+    ft::map<int, int>::iterator my_it = my_map2.begin();
+    std::map<int, int>::iterator def_it = def_map2.begin();
+    ASSERT_EQ(my_it->second, def_it->second);
+    while (def_it != def_map2.end()) {
+        ASSERT_EQ(my_it->first, def_it->first);
+        ASSERT_EQ(def_map2.size(), my_map2.size());
+        ++def_it;
+        ++my_it;
+    }
+}
+
+TEST(Empty, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> def_map;
+
+    ASSERT_EQ(def_map.empty(), my_map.empty());
+
+    my_map.insert(std::make_pair(4, 4));
+    def_map.insert(std::make_pair(4, 4));
+
+    ASSERT_EQ(def_map.empty(), my_map.empty());
+}
+
+TEST(Max_size, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> def_map;
+    ASSERT_EQ(my_map.max_size(), def_map.max_size());
+}
+
 TEST(SquareBrackets, Map) {
     ft::map<int, int> my_map;
     std::map<int, int> def_map;
@@ -163,18 +230,32 @@ TEST(Swap, Map) {
     }
 }
 
-TEST(Key_comp, Map) {
+TEST(Clear, Map) {
     ft::map<char,int> my_map;
     std::map<char,int> def_map;
-
-    ft::map<char,int>::key_compare my_comp = my_map.key_comp();
-    std::map<char,int>::key_compare def_comp = def_map.key_comp();
 
     my_map['a']=100;    def_map['a']=100;
     my_map['b']=200;    def_map['b']=200;
     my_map['c']=300;    def_map['c']=300;
 
-    char my_highest = my_map.rbegin()->first;     // key value of last element
+    ASSERT_EQ(def_map.size(), my_map.size());
+
+    my_map.clear();     def_map.clear();
+
+    ASSERT_EQ(def_map.size(), my_map.size());
+}
+
+TEST(Key_comp, Map) {
+    ft::map<char,int> my_map;
+    std::map<char,int> def_map;
+
+    ft::map<char,int>::key_compare my_comp = my_map.key_comp();
+
+    my_map['a']=100;    def_map['a']=100;
+    my_map['b']=200;    def_map['b']=200;
+    my_map['c']=300;    def_map['c']=300;
+
+
     char def_highest = def_map.rbegin()->first;     // key value of last element
 
     ft::map<char,int>::iterator my_it = my_map.begin();
@@ -287,42 +368,153 @@ TEST(Equal_range, Map) {
 
 
 TEST(Erase, Map) {
-    ft::map<char,int> my_map;
-    std::map<char,int> def_map;
-    ft::map<char,int>::iterator my_it;
-    std::map<char,int>::iterator def_it;
+    ft::map<char, int> my_map;
+    std::map<char, int> def_map;
+    ft::map<char, int>::iterator my_it;
+    std::map<char, int>::iterator def_it;
 
-    my_map['a']=10;
-    my_map['b']=20;
-    my_map['c']=30;
-    my_map['d']=40;
-    my_map['e']=50;
-    my_map['f']=60;
+    my_map['a'] = 10;
+    my_map['b'] = 20;
+    my_map['c'] = 30;
+    my_map['d'] = 40;
+    my_map['e'] = 50;
+    my_map['f'] = 60;
 
-    def_map['a']=10;
-    def_map['b']=20;
-    def_map['c']=30;
-    def_map['d']=40;
-    def_map['e']=50;
-    def_map['f']=60;
+    def_map['a'] = 10;
+    def_map['b'] = 20;
+    def_map['c'] = 30;
+    def_map['d'] = 40;
+    def_map['e'] = 50;
+    def_map['f'] = 60;
 
 
     my_it = my_map.find('b');
-    my_map.erase (my_it);
-    my_map.erase ('c');
-    my_it = my_map.find ('e');
-    my_map.erase ( my_it, my_map.end());
+    my_map.erase(my_it);
+    my_map.erase('c');
+    my_it = my_map.find('e');
+    my_map.erase(my_it, my_map.end());
 
     def_it = def_map.find('b');
-    def_map.erase (def_it);
-    def_map.erase ('c');
-    def_it = def_map.find ('e');
-    def_map.erase ( def_it, def_map.end() );
+    def_map.erase(def_it);
+    def_map.erase('c');
+    def_it = def_map.find('e');
+    def_map.erase(def_it, def_map.end());
 
     my_it = my_map.begin();
     for (def_it = def_map.begin(); def_it != def_map.end(); ++def_it) {
         ASSERT_EQ(my_it->first, def_it->first);
         ++my_it;
     }
-     while(1) {}
+}
+TEST(Iterator, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> default_map;
+    for (size_t i = 0; i < 10; i++) {
+        my_map.insert(std::make_pair(i, i));
+        default_map.insert(std::make_pair(i, i));
+    }
+    ft::map<int, int>::iterator it = my_map.begin();
+    std::map<int, int>::iterator def_it = default_map.begin();
+    ft::map<int, int>::iterator ite = my_map.end();
+    std::map<int, int>::iterator def_ite = default_map.end();
+    ASSERT_EQ(*it, *def_it);
+    ++it; ++def_it;
+    ASSERT_EQ(*it, *def_it);
+    it++; def_it++;
+    ASSERT_EQ(*it, *def_it);
+    --it; --def_it;
+    ASSERT_EQ(*it, *def_it);
+
+    ite--; def_ite--;
+    ASSERT_EQ(*ite, *def_ite);
+    ASSERT_EQ(*ite, *def_ite);
+
+    ASSERT_TRUE(it == it);
+    ASSERT_FALSE(it != it);
+
+    ft::map<int, int>::const_iterator my_const_it(it);
+
+    ASSERT_TRUE(it == my_const_it);
+    ASSERT_FALSE(it != my_const_it);
+}
+
+TEST(ConstIterator, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> default_map;
+    for (size_t i = 0; i < 10; i++) {
+        my_map.insert(std::make_pair(i, i));
+        default_map.insert(std::make_pair(i, i));
+    }
+    ft::map<int, int>::const_iterator it = my_map.begin();
+    std::map<int, int>::const_iterator def_it = default_map.begin();
+    ft::map<int, int>::const_iterator ite = my_map.end();
+    std::map<int, int>::const_iterator def_ite = default_map.end();
+    ASSERT_EQ(*it, *def_it);
+    ++it; ++def_it;
+    ASSERT_EQ(*it, *def_it);
+    it++; def_it++;
+    ASSERT_EQ(*it, *def_it);
+    --it; --def_it;
+    ASSERT_EQ(*it, *def_it);
+
+    ite--; def_ite--;
+    ASSERT_EQ(*ite, *def_ite);
+
+    ASSERT_EQ(*ite, *def_ite);
+
+    ASSERT_TRUE(it == it);
+    ASSERT_FALSE(it != it);
+
+    ft::map<int, int>::iterator my_not_const_it = my_map.begin();
+    it = my_map.begin();
+
+    ASSERT_TRUE(it == my_not_const_it);
+    ASSERT_FALSE(it != my_not_const_it);
+}
+
+
+TEST(ReverseIterator, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> default_map;
+    for (size_t i = 0; i < 10; i++) {
+        my_map.insert(std::make_pair(i, i));
+        default_map.insert(std::make_pair(i, i));
+    }
+    ft::map<int, int>::reverse_iterator it = my_map.rbegin();
+    std::map<int, int>::reverse_iterator def_it = default_map.rbegin();
+    ft::map<int, int>::reverse_iterator ite = my_map.rend();
+    std::map<int, int>::reverse_iterator def_ite = default_map.rend();
+    ASSERT_EQ(*it, *def_it);
+    ++it; ++def_it;
+    ASSERT_EQ(*it, *def_it);
+    --it; --def_it;
+
+    ASSERT_EQ(*it, *def_it);
+    --ite;
+    --def_ite;
+    ASSERT_EQ(*ite, *def_ite);
+
+}
+
+TEST(ConstReverseIterator, Map) {
+    ft::map<int, int> my_map;
+    std::map<int, int> default_map;
+    for (size_t i = 0; i < 10; i++) {
+        my_map.insert(std::make_pair(i, i));
+        default_map.insert(std::make_pair(i, i));
+    }
+    ft::map<int, int>::const_reverse_iterator it = my_map.rbegin();
+    std::map<int, int>::const_reverse_iterator def_it = default_map.rbegin();
+    ft::map<int, int>::const_reverse_iterator ite = my_map.rend();
+    std::map<int, int>::const_reverse_iterator def_ite = default_map.rend();
+    ASSERT_EQ(*it, *def_it);
+    ++it; ++def_it;
+    ASSERT_EQ(*it, *def_it);
+    --it; --def_it;
+    ASSERT_EQ(*it, *def_it);
+
+    --ite;
+    --def_ite;
+    ASSERT_EQ(*ite, *def_ite);
+//     while(1) {}
 }

@@ -121,7 +121,7 @@ namespace ft {
             clear();
             deleteEmptyNode(_begin);
             deleteEmptyNode(_end);
-        } //TODO
+        }
 
         map& operator= (const map& x) {
             clear(); // then clear is will be ready
@@ -133,7 +133,7 @@ namespace ft {
 
         bool empty() const { return !_size;}
         size_type size() const { return _size;}
-        size_type max_size() const { return -1 / sizeof(reference);}// TODO not work
+        size_type max_size() const { return -1 / (sizeof(reference) * 2 + sizeof(value_type) * 3);}
         key_compare key_comp() const {return _compare;}
         value_compare value_comp() const {return value_compare(_compare);}
 
@@ -557,8 +557,8 @@ namespace ft {
                 return (*this);
             }
 
-            bool operator==(iterator const &other) { return other._node == _node; }
-            bool operator!=(iterator const &other) { return other._node != _node; }
+            bool operator==(iterator const &other) { return other.getNode() == _node; }
+            bool operator!=(iterator const &other) { return other.getNode() != _node; }
             bool operator==(const_iterator const& other) {return other.getNode() == _node;}
             bool operator!=(const_iterator const& other) {return other.getNode()!= _node;}
 
@@ -623,8 +623,8 @@ namespace ft {
                 return (*this);
             }
 
-            bool operator==(reverse_iterator const &other) { return other._node == _node; }
-            bool operator!=(reverse_iterator const &other) { return other._node != _node; }
+            bool operator==(reverse_iterator const &other) { return other.getNode() == _node; }
+            bool operator!=(reverse_iterator const &other) { return other.getNode() != _node; }
             bool operator==(const_reverse_iterator const& other) {return other.getNode() == _node;}
             bool operator!=(const_reverse_iterator const& other) {return other.getNode()!= _node;}
 
@@ -694,8 +694,8 @@ namespace ft {
                 return(*this);
             }
 
-            bool operator==(reverse_iterator const &other) { return other._node == _node; }
-            bool operator!=(reverse_iterator const &other) { return other._node != _node; }
+            bool operator==(reverse_iterator const &other) { return other.getNode() == _node; }
+            bool operator!=(reverse_iterator const &other) { return other.getNode() != _node; }
             bool operator==(const_reverse_iterator const& other) {return other.getNode() == _node;}
             bool operator!=(const_reverse_iterator const& other) {return other.getNode()!= _node;}
 
