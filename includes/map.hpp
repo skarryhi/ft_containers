@@ -42,10 +42,13 @@ namespace ft {
             struct Node *left;
             struct Node *right;
             struct Node *parent;
-            value_type *content;
+            bool        color;
+            value_type  *content;
         } node;
     private:
 
+        const static bool black = false;
+        const static bool red = true;
 
         typedef typename allocator_type::template rebind<node>::other allocator_rebind_type;
         allocator_rebind_type _allocator_rebind;
@@ -62,6 +65,7 @@ namespace ft {
             newNode->left = nullptr;
             newNode->right = nullptr;
             newNode->content = nullptr;
+            newNode->color = black;
             return newNode;
         }
 
@@ -70,6 +74,7 @@ namespace ft {
             newNode->parent = nullptr;
             newNode->left = nullptr;
             newNode->right = nullptr;
+            _size == 0 ? newNode->color = black : newNode->color = red;
             newNode->content = _alloc.allocate(1);
             _alloc.construct(newNode->content, value);
             ++_size;
@@ -85,6 +90,110 @@ namespace ft {
 
         void    deleteEmptyNode(node * const oldNode) {
             _allocator_rebind.deallocate(oldNode, 1);
+        }
+
+        void leftRotate(node *balanceNode) {
+            node *parent = balanceNode;
+            balanceNode = balanceNode->right;
+
+            if (parent->parent && parent->parent->left == parent) {
+                node *grandParentLeft = parent->parent;
+                grandParentLeft->left = balanceNode;
+                balanceNode->parent = grandParentLeft;
+                balanceNode->left = parent;
+                parent->parent = balanceNode;
+            }
+            else if (parent->parent && parent->parent->right == parent){
+                node *grandParentRight = parent->parent;
+                grandParentRight->right = balanceNode;
+                balanceNode->parent = grandParentRight;
+                balanceNode->left = parent;
+                parent->parent = balanceNode;
+            } else {
+                balanceNode->parent = nullptr;
+                balanceNode->left = parent;
+                parent->parent = balanceNode;
+            }
+        }
+
+        void rightRotate(node *balanceNode){
+            node *parent = balanceNode;
+            balanceNode = balanceNode->left;
+
+            if (parent->parent && parent->parent->left == parent) {
+                node *grandParentLeft = parent->parent;
+                grandParentLeft->left = balanceNode;
+                balanceNode->parent = grandParentLeft;
+                balanceNode->right = parent;
+                parent->parent = balanceNode;
+            }
+            else if (parent->parent && parent->parent->right == parent){
+                node *grandParentRight = parent->parent;
+                grandParentRight->right = balanceNode;
+                balanceNode->parent = grandParentRight;
+                balanceNode->right = parent;
+                parent->parent = balanceNode;
+            } else {
+                balanceNode->parent = nullptr;
+                balanceNode->right = parent;
+                parent->parent = balanceNode;
+            }
+        }
+
+        void fixInsertion(node *balanceNode) {
+            if (balanceNode == _root) {
+                balanceNode->color = black;
+                return;
+            }
+            while (balanceNode->parent && balanceNode->parent->color == red) {
+                //"отец" красный
+                if (balanceNode->parent->parent->left == balanceNode->parent) {
+                    // "отец" — левый ребенок
+                    if (balanceNode->parent->parent->right && balanceNode->parent->parent->right != _end) {
+                        // есть "дядя"
+                        if (balanceNode->parent->parent->right->color != true) {
+                            // "дядя" красный
+                            balanceNode->parent->color = black;
+                            balanceNode->parent->parent->right->color = black;
+                            balanceNode->parent->parent->color = red;
+                        }
+                        balanceNode = balanceNode->parent->parent;
+                    } else {
+                    // случай, когда нет "дяди"
+                        if (balanceNode->parent->right == balanceNode) {
+                            // balanceNode — правый сын
+                            balanceNode = balanceNode->parent;
+                            leftRotate(balanceNode);
+                        }
+                        balanceNode->parent->color = black;
+                        balanceNode->parent->parent->color = red;
+                        rightRotate(balanceNode->parent->parent);
+                    }
+                } else {
+                    // "отец" — правый ребенок
+                    if (balanceNode->parent->parent->left && balanceNode->parent->parent->left != _begin) {
+                        //есть "дядя"
+                        if (balanceNode->parent->parent->left->color == red) {
+                            // "дядя" красный
+                            balanceNode->parent->color = black;
+                            balanceNode->parent->parent->left->color = black;
+                            balanceNode->parent->parent->color = red;
+                        }
+                        balanceNode = balanceNode->parent->parent;
+                    } else {
+                        // нет "дяди"
+                        if (balanceNode->parent->left == balanceNode) {
+                            // balanceNode — левый ребенок
+                            balanceNode = balanceNode->parent;
+                            rightRotate(balanceNode);
+                        }
+                        balanceNode->parent->color = black;
+                        balanceNode->parent->parent->color = red;
+                        leftRotate(balanceNode->parent->parent);
+                    }
+                }
+            }
+            _root->color = black;
         }
 
     public:
@@ -197,6 +306,8 @@ namespace ft {
                 else
                     it = iterator(tmp);
             }
+            fixInsertion(it.getNode());
+            std::cout << it.getNode()->content->first << std::endl;
             return std::make_pair(it, change);
         }
 

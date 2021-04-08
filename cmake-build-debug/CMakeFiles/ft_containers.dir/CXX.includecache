@@ -57,10 +57,6 @@ stack
 -
 includes/map.hpp
 /Users/skarry/Desktop/containers/includes/map.hpp
-includes/list.hpp
-/Users/skarry/Desktop/containers/includes/list.hpp
-includes/vector.hpp
-/Users/skarry/Desktop/containers/includes/vector.hpp
 includes/queue.hpp
 /Users/skarry/Desktop/containers/includes/queue.hpp
 includes/stack.hpp
