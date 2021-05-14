@@ -9,12 +9,12 @@
 #include "includes/stack.hpp"
 
 int main() {
-    ft::map<int, int> my_map;
-    std::map<int, int> def_map;
+    ft::map<const int, int> my_map;
+    std::map<const int, int> def_map;
 
-    for (size_t i = 0; i < 100; i++) {
+    for (int i = 1; i < 10; i++) {
         my_map.insert(std::make_pair(i, i));
-        def_map.insert(std::make_pair(i, i));
+//        def_map.insert(std::make_pair(i, i));
     }
     return 0;
 }

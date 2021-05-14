@@ -92,108 +92,104 @@ namespace ft {
             _allocator_rebind.deallocate(oldNode, 1);
         }
 
-        void leftRotate(node *balanceNode) {
-            node *parent = balanceNode;
-            balanceNode = balanceNode->right;
+        void leftRotate(node *parentNode) {
+            node *childNode = parentNode->right;
 
-            if (parent->parent && parent->parent->left == parent) {
-                node *grandParentLeft = parent->parent;
-                grandParentLeft->left = balanceNode;
-                balanceNode->parent = grandParentLeft;
-                balanceNode->left = parent;
-                parent->parent = balanceNode;
-            }
-            else if (parent->parent && parent->parent->right == parent){
-                node *grandParentRight = parent->parent;
-                grandParentRight->right = balanceNode;
-                balanceNode->parent = grandParentRight;
-                balanceNode->left = parent;
-                parent->parent = balanceNode;
-            } else {
-                balanceNode->parent = nullptr;
-                balanceNode->left = parent;
-                parent->parent = balanceNode;
-            }
-        }
-
-        void rightRotate(node *balanceNode){
-            node *parent = balanceNode;
-            balanceNode = balanceNode->left;
-
-            if (parent->parent && parent->parent->left == parent) {
-                node *grandParentLeft = parent->parent;
-                grandParentLeft->left = balanceNode;
-                balanceNode->parent = grandParentLeft;
-                balanceNode->right = parent;
-                parent->parent = balanceNode;
-            }
-            else if (parent->parent && parent->parent->right == parent){
-                node *grandParentRight = parent->parent;
-                grandParentRight->right = balanceNode;
-                balanceNode->parent = grandParentRight;
-                balanceNode->right = parent;
-                parent->parent = balanceNode;
-            } else {
-                balanceNode->parent = nullptr;
-                balanceNode->right = parent;
-                parent->parent = balanceNode;
-            }
-        }
-
-        void fixInsertion(node *balanceNode) {
-            if (balanceNode == _root) {
-                balanceNode->color = black;
-                return;
-            }
-            while (balanceNode->parent && balanceNode->parent->color == red) {
-                //"отец" красный
-                if (balanceNode->parent->parent->left == balanceNode->parent) {
-                    // "отец" — левый ребенок
-                    if (balanceNode->parent->parent->right && balanceNode->parent->parent->right != _end) {
-                        // есть "дядя"
-                        if (balanceNode->parent->parent->right->color != true) {
-                            // "дядя" красный
-                            balanceNode->parent->color = black;
-                            balanceNode->parent->parent->right->color = black;
-                            balanceNode->parent->parent->color = red;
-                        }
-                        balanceNode = balanceNode->parent->parent;
-                    } else {
-                    // случай, когда нет "дяди"
-                        if (balanceNode->parent->right == balanceNode) {
-                            // balanceNode — правый сын
-                            balanceNode = balanceNode->parent;
-                            leftRotate(balanceNode);
-                        }
-                        balanceNode->parent->color = black;
-                        balanceNode->parent->parent->color = red;
-                        rightRotate(balanceNode->parent->parent);
-                    }
+            if (parentNode->parent) {
+                node *grandParent = parentNode->parent;
+                childNode->parent = grandParent;
+                grandParent->left == parentNode ? grandParent->left = childNode : grandParent->right = childNode;
+                if (childNode->left) {
+                    node *tail = childNode->left;
+                    tail->parent = parentNode;
+                    parentNode->right = tail;
                 } else {
-                    // "отец" — правый ребенок
-                    if (balanceNode->parent->parent->left && balanceNode->parent->parent->left != _begin) {
-                        //есть "дядя"
-                        if (balanceNode->parent->parent->left->color == red) {
-                            // "дядя" красный
-                            balanceNode->parent->color = black;
-                            balanceNode->parent->parent->left->color = black;
-                            balanceNode->parent->parent->color = red;
-                        }
-                        balanceNode = balanceNode->parent->parent;
+                    parentNode->right = nullptr;
+                }
+                childNode->left = parentNode;
+                parentNode->parent = childNode;
+            } else {
+                childNode->parent = nullptr;
+                _root = childNode;
+                if (childNode->left) {
+                    node *tail = childNode->left;
+                    tail->parent = parentNode;
+                    parentNode->right = tail;
+                } else {
+                    parentNode->right = nullptr;
+                }
+                childNode->left = parentNode;
+                parentNode->parent = childNode;
+            }
+            _root == childNode ? childNode->color = black : childNode->color = parentNode->color;
+            parentNode->color = red;
+        }
+
+        void rightRotate(node *parentNode) {
+            node *childNode = parentNode->left;
+
+            if (parentNode->parent) {
+                node *grandParent = parentNode->parent;
+                childNode->parent = grandParent;
+                grandParent->left == parentNode ? grandParent->left = childNode : grandParent->right = childNode;
+                if (childNode->right) {
+                    node *tail = childNode->right;
+                    tail->parent = parentNode;
+                    parentNode->left = tail;
+                } else {
+                    parentNode->left = nullptr;
+                }
+                childNode->right = parentNode;
+                parentNode->parent = childNode;
+            } else {
+                childNode->parent = nullptr;
+                _root = childNode;
+                if (childNode->right) {
+                    node *tail = childNode->right;
+                    tail->parent = parentNode;
+                    parentNode->left = tail;
+                } else {
+                    parentNode->left = nullptr;
+                }
+                childNode->right = parentNode;
+                parentNode->parent = childNode;
+            }
+            _root == childNode ? childNode->color = black : childNode->color = parentNode->color;
+            parentNode->color = red;
+        }
+
+
+        void    swipeColor(node *parentNode) {
+                parentNode == _root ? parentNode->color = black : parentNode->color = red;
+                parentNode->left->color = black;
+                parentNode->right->color = black;
+            }
+
+        void checkBalancing(node *tmpNode) {
+            while (tmpNode) {
+                if (tmpNode->right && tmpNode->right != _end && tmpNode->right->color == red) {
+                    if (tmpNode->left && tmpNode->left != _begin && tmpNode->left->color == red) {
+                        swipeColor(tmpNode);
+//                        std::cout << "swipeColor" << std::endl;
                     } else {
-                        // нет "дяди"
-                        if (balanceNode->parent->left == balanceNode) {
-                            // balanceNode — левый ребенок
-                            balanceNode = balanceNode->parent;
-                            rightRotate(balanceNode);
-                        }
-                        balanceNode->parent->color = black;
-                        balanceNode->parent->parent->color = red;
-                        leftRotate(balanceNode->parent->parent);
+                        leftRotate(tmpNode);
+//                        std::cout << "leftRotate" << std::endl;
                     }
                 }
+                else if (tmpNode->left && tmpNode->left != _begin && tmpNode->left->color == red &&
+                        tmpNode->left->left && tmpNode->left->left != _begin && tmpNode->left->left->color == red) {
+                    rightRotate(tmpNode);
+//                    std::cout << "rightRotate" << std::endl;
+                }
+                tmpNode = tmpNode->parent;
             }
-            _root->color = black;
+//            iterator first = begin();
+//            iterator last = end();
+//            while (first != last) {
+//                std::cout << first.getNode()->content->first << std::endl;
+//                ++first;
+//            }
+//            std::cout << std::endl;
         }
 
     public:
@@ -254,118 +250,120 @@ namespace ft {
             map::iterator it = end();
             bool change = false;
             struct Node *tmp = _root;
-            if (_root == _begin) {
+            if (_size == 0) {
                 _root = newNode(val);
                 _begin->parent = _root;
                 _end->parent = _root;
                 _root->left = _begin;
                 _root->right = _end;
                 it = iterator(_root);
+//                std::cout << "add to root ";
             }
             while (it == end()) {
-                if (_compare(val.first, tmp->content->first)) {
-                    if (!_compare(tmp->content->first, val.first)) {
-                        if (tmp->left == _begin || tmp->left == nullptr) {
-                            if (tmp->left == _begin) {
-                                tmp->left = newNode(val);
-                                _begin->parent = tmp->left;
-                                it = iterator(tmp->left);
-                                change = true;
-                                tmp->left->left = _begin;
-                            } else {
-                                tmp->left = newNode(val);
-                                it = iterator(tmp->left);
-                                change = true;
-                                tmp->left->left = nullptr;
-                            }
-                            tmp->left->parent = tmp;
-                        } else
-                            tmp = tmp->left;
-                    }
-                }
-                else if (_compare(tmp->content->first, val.first)) {
-                    if (!_compare(val.first, tmp->content->first)) {
-                        if (tmp->right == _end || tmp->right == nullptr) {
-                            if (tmp->right == _end) {
-                                tmp->right = newNode(val);
-                                _end->parent = tmp->right;
-                                it = iterator(tmp->right);
-                                tmp->right->right = _end;
-                                change = true;
-                            } else {
-                                tmp->right = newNode(val);
-                                it = iterator(tmp->right);
-                                change = true;
-                                tmp->right->right = nullptr;
-                            }
-                            tmp->right->parent = tmp;
-                        } else
-                            tmp = tmp->right;
-                    }
-                }
-                else
-                    it = iterator(tmp);
-            }
-            fixInsertion(it.getNode());
-            std::cout << it.getNode()->content->first << std::endl;
-            return std::make_pair(it, change);
-        }
-
-        iterator insert (iterator position, const value_type& val) {
-            map::iterator it;
-            node *tmp = position.getNode();
-            if (_compare(val.first, position->first)) {
-                if (!_compare(position->first, val.first)) {
+                if (_compare(val.first, tmp->content->first) &&
+                    !_compare(tmp->content->first, val.first)) {
                     if (tmp->left == _begin || tmp->left == nullptr) {
                         if (tmp->left == _begin) {
                             tmp->left = newNode(val);
                             _begin->parent = tmp->left;
                             it = iterator(tmp->left);
+//                            std::cout << "add to left ";
+                            change = true;
                             tmp->left->left = _begin;
                         } else {
                             tmp->left = newNode(val);
                             it = iterator(tmp->left);
+//                            std::cout << "add to left ";
+                            change = true;
                             tmp->left->left = nullptr;
                         }
                         tmp->left->parent = tmp;
-                    }
-                    else {
-                        node *after = tmp->left;
-                        tmp->left = newNode(val);
-                        after->parent = tmp->left;
-                        it = iterator(tmp->left);
-                        tmp->left->left = after;
-                        tmp->left->parent = tmp;
-                    }
+                    } else
+                        tmp = tmp->left;
                 }
-            }
-            else if (_compare(position->first, val.first)) {
-                if (!_compare(val.first, position->first)) {
+                else if (_compare(tmp->content->first, val.first) &&
+                        !_compare(val.first, tmp->content->first)) {
                     if (tmp->right == _end || tmp->right == nullptr) {
                         if (tmp->right == _end) {
                             tmp->right = newNode(val);
                             _end->parent = tmp->right;
                             it = iterator(tmp->right);
+//                            std::cout << "add to right ";
                             tmp->right->right = _end;
+                            change = true;
                         } else {
                             tmp->right = newNode(val);
                             it = iterator(tmp->right);
+//                            std::cout << "add to right ";
+                            change = true;
                             tmp->right->right = nullptr;
                         }
                         tmp->right->parent = tmp;
+                    } else
+                        tmp = tmp->right;
+                }
+                else
+                    it = iterator(tmp);
+            }
+//            std::cout << it->first << std::endl;
+            checkBalancing(it.getNode());
+            return std::make_pair(it, change);
+        }
+
+        iterator insert(iterator position, const value_type& val) {
+            map::iterator it;
+            node *tmp = position.getNode();
+            if (_compare(val.first, position->first) &&
+                    !_compare(position->first, val.first)) {
+                if (tmp->left == _begin || tmp->left == nullptr) {
+                    if (tmp->left == _begin) {
+                        tmp->left = newNode(val);
+                        _begin->parent = tmp->left;
+                        it = iterator(tmp->left);
+                        tmp->left->left = _begin;
+                    } else {
+                        tmp->left = newNode(val);
+                        it = iterator(tmp->left);
+                        tmp->left->left = nullptr;
                     }
-                    else {
-                        node *after = tmp->right;
+                    tmp->left->parent = tmp;
+                }
+                else {
+                    node *after = tmp->left;
+                    tmp->left = newNode(val);
+                    after->parent = tmp->left;
+                    it = iterator(tmp->left);
+                    tmp->left->left = after;
+                    tmp->left->parent = tmp;
+                }
+            }
+            else if (_compare(position->first, val.first) &&
+                    !_compare(val.first, position->first)) {
+                if (tmp->right == _end || tmp->right == nullptr) {
+                    if (tmp->right == _end) {
                         tmp->right = newNode(val);
-                        after->parent = tmp->right;
+                        _end->parent = tmp->right;
                         it = iterator(tmp->right);
-                        tmp->right->right = after;
-                        tmp->right->parent = tmp;
+                        tmp->right->right = _end;
+                    } else {
+                        tmp->right = newNode(val);
+                        it = iterator(tmp->right);
+                        tmp->right->right = nullptr;
                     }
+                    tmp->right->parent = tmp;
+                }
+                else {
+                    node *after = tmp->right;
+                    tmp->right = newNode(val);
+                    after->parent = tmp->right;
+                    it = iterator(tmp->right);
+                    tmp->right->right = after;
+                    tmp->right->parent = tmp;
                 }
             }
             else
                 it = iterator(tmp);
+            checkBalancing(it.getNode());
             return it;
         }
 
