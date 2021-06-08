@@ -183,13 +183,6 @@ namespace ft {
                 }
                 tmpNode = tmpNode->parent;
             }
-//            iterator first = begin();
-//            iterator last = end();
-//            while (first != last) {
-//                std::cout << first.getNode()->content->first << std::endl;
-//                ++first;
-//            }
-//            std::cout << std::endl;
         }
 
     public:

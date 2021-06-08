@@ -1,3 +1,548 @@
-Start testing: May 14 22:18 MSK
+Start testing: Jun 08 14:14 MSK
 ----------------------------------------------------------
-End testing: May 14 22:18 MSK
+1/5 Testing: runVector
+1/5 Test: runVector
+Command: "/Users/skarry/Desktop/containers/cmake-build-debug/runVector"
+Directory: /Users/skarry/Desktop/containers/cmake-build-debug
+"runVector" start time: Jun 08 14:14 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/skarry/Desktop/containers/google_test/googletest/src/gtest_main.cc
+[==========] Running 28 tests from 28 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from ConstructorEmpty
+[ RUN      ] ConstructorEmpty.Vector
+[       OK ] ConstructorEmpty.Vector (0 ms)
+[----------] 1 test from ConstructorEmpty (0 ms total)
+
+[----------] 1 test from ConstructorNumVal
+[ RUN      ] ConstructorNumVal.Vector
+[       OK ] ConstructorNumVal.Vector (0 ms)
+[----------] 1 test from ConstructorNumVal (0 ms total)
+
+[----------] 1 test from ConstructorCopy
+[ RUN      ] ConstructorCopy.Vector
+[       OK ] ConstructorCopy.Vector (0 ms)
+[----------] 1 test from ConstructorCopy (0 ms total)
+
+[----------] 1 test from ConstructorIterators
+[ RUN      ] ConstructorIterators.Vector
+[       OK ] ConstructorIterators.Vector (1 ms)
+[----------] 1 test from ConstructorIterators (1 ms total)
+
+[----------] 1 test from OperatorEquals
+[ RUN      ] OperatorEquals.Vector
+[       OK ] OperatorEquals.Vector (0 ms)
+[----------] 1 test from OperatorEquals (0 ms total)
+
+[----------] 1 test from Size
+[ RUN      ] Size.Vector
+[       OK ] Size.Vector (0 ms)
+[----------] 1 test from Size (0 ms total)
+
+[----------] 1 test from Max_size
+[ RUN      ] Max_size.Vector
+[       OK ] Max_size.Vector (0 ms)
+[----------] 1 test from Max_size (0 ms total)
+
+[----------] 1 test from Resize
+[ RUN      ] Resize.Vector
+[       OK ] Resize.Vector (0 ms)
+[----------] 1 test from Resize (0 ms total)
+
+[----------] 1 test from Capacity
+[ RUN      ] Capacity.Vector
+[       OK ] Capacity.Vector (0 ms)
+[----------] 1 test from Capacity (0 ms total)
+
+[----------] 1 test from Empty
+[ RUN      ] Empty.Vector
+[       OK ] Empty.Vector (0 ms)
+[----------] 1 test from Empty (0 ms total)
+
+[----------] 1 test from Reserve
+[ RUN      ] Reserve.Vector
+[       OK ] Reserve.Vector (0 ms)
+[----------] 1 test from Reserve (0 ms total)
+
+[----------] 1 test from Square_parentheses
+[ RUN      ] Square_parentheses.Vector
+[       OK ] Square_parentheses.Vector (0 ms)
+[----------] 1 test from Square_parentheses (0 ms total)
+
+[----------] 1 test from At
+[ RUN      ] At.Vector
+[       OK ] At.Vector (0 ms)
+[----------] 1 test from At (0 ms total)
+
+[----------] 1 test from Front
+[ RUN      ] Front.Vector
+[       OK ] Front.Vector (0 ms)
+[----------] 1 test from Front (0 ms total)
+
+[----------] 1 test from Back
+[ RUN      ] Back.Vector
+[       OK ] Back.Vector (0 ms)
+[----------] 1 test from Back (0 ms total)
+
+[----------] 1 test from Assign
+[ RUN      ] Assign.Vector
+[       OK ] Assign.Vector (0 ms)
+[----------] 1 test from Assign (0 ms total)
+
+[----------] 1 test from Push_back
+[ RUN      ] Push_back.Vector
+[       OK ] Push_back.Vector (0 ms)
+[----------] 1 test from Push_back (0 ms total)
+
+[----------] 1 test from Pop_back
+[ RUN      ] Pop_back.Vector
+[       OK ] Pop_back.Vector (0 ms)
+[----------] 1 test from Pop_back (0 ms total)
+
+[----------] 1 test from Insert
+[ RUN      ] Insert.Vector
+[       OK ] Insert.Vector (0 ms)
+[----------] 1 test from Insert (0 ms total)
+
+[----------] 1 test from Erase
+[ RUN      ] Erase.Vector
+[       OK ] Erase.Vector (0 ms)
+[----------] 1 test from Erase (0 ms total)
+
+[----------] 1 test from Swap
+[ RUN      ] Swap.Vector
+[       OK ] Swap.Vector (0 ms)
+[----------] 1 test from Swap (0 ms total)
+
+[----------] 1 test from Clear
+[ RUN      ] Clear.Vector
+[       OK ] Clear.Vector (0 ms)
+[----------] 1 test from Clear (0 ms total)
+
+[----------] 1 test from Iterator
+[ RUN      ] Iterator.Vector
+[       OK ] Iterator.Vector (0 ms)
+[----------] 1 test from Iterator (0 ms total)
+
+[----------] 1 test from ConstIterator
+[ RUN      ] ConstIterator.Vector
+[       OK ] ConstIterator.Vector (0 ms)
+[----------] 1 test from ConstIterator (0 ms total)
+
+[----------] 1 test from ReverseIterator
+[ RUN      ] ReverseIterator.Vector
+[       OK ] ReverseIterator.Vector (0 ms)
+[----------] 1 test from ReverseIterator (0 ms total)
+
+[----------] 1 test from ConstReverseIterator
+[ RUN      ] ConstReverseIterator.Vector
+[       OK ] ConstReverseIterator.Vector (0 ms)
+[----------] 1 test from ConstReverseIterator (0 ms total)
+
+[----------] 1 test from SwapVectors
+[ RUN      ] SwapVectors.Vector
+[       OK ] SwapVectors.Vector (0 ms)
+[----------] 1 test from SwapVectors (0 ms total)
+
+[----------] 1 test from RelationalOperators
+[ RUN      ] RelationalOperators.Vector
+[       OK ] RelationalOperators.Vector (0 ms)
+[----------] 1 test from RelationalOperators (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 28 tests from 28 test cases ran. (1 ms total)
+[  PASSED  ] 28 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"runVector" end time: Jun 08 14:14 MSK
+"runVector" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: runList
+2/5 Test: runList
+Command: "/Users/skarry/Desktop/containers/cmake-build-debug/runList"
+Directory: /Users/skarry/Desktop/containers/cmake-build-debug
+"runList" start time: Jun 08 14:14 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/skarry/Desktop/containers/google_test/googletest/src/gtest_main.cc
+[==========] Running 32 tests from 32 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from ConstructorEmpty
+[ RUN      ] ConstructorEmpty.List
+[       OK ] ConstructorEmpty.List (0 ms)
+[----------] 1 test from ConstructorEmpty (0 ms total)
+
+[----------] 1 test from ConstructorNumVal
+[ RUN      ] ConstructorNumVal.List
+[       OK ] ConstructorNumVal.List (0 ms)
+[----------] 1 test from ConstructorNumVal (0 ms total)
+
+[----------] 1 test from ConstructorCopy
+[ RUN      ] ConstructorCopy.List
+[       OK ] ConstructorCopy.List (0 ms)
+[----------] 1 test from ConstructorCopy (0 ms total)
+
+[----------] 1 test from ConstructorIterators
+[ RUN      ] ConstructorIterators.List
+[       OK ] ConstructorIterators.List (0 ms)
+[----------] 1 test from ConstructorIterators (0 ms total)
+
+[----------] 1 test from OperatorEquals
+[ RUN      ] OperatorEquals.List
+[       OK ] OperatorEquals.List (0 ms)
+[----------] 1 test from OperatorEquals (0 ms total)
+
+[----------] 1 test from Size
+[ RUN      ] Size.List
+[       OK ] Size.List (0 ms)
+[----------] 1 test from Size (0 ms total)
+
+[----------] 1 test from Max_size
+[ RUN      ] Max_size.List
+[       OK ] Max_size.List (0 ms)
+[----------] 1 test from Max_size (0 ms total)
+
+[----------] 1 test from Empty
+[ RUN      ] Empty.List
+[       OK ] Empty.List (0 ms)
+[----------] 1 test from Empty (0 ms total)
+
+[----------] 1 test from Front
+[ RUN      ] Front.List
+[       OK ] Front.List (0 ms)
+[----------] 1 test from Front (0 ms total)
+
+[----------] 1 test from Back
+[ RUN      ] Back.List
+[       OK ] Back.List (0 ms)
+[----------] 1 test from Back (0 ms total)
+
+[----------] 1 test from Assign
+[ RUN      ] Assign.List
+[       OK ] Assign.List (0 ms)
+[----------] 1 test from Assign (0 ms total)
+
+[----------] 1 test from Push_back
+[ RUN      ] Push_back.List
+[       OK ] Push_back.List (0 ms)
+[----------] 1 test from Push_back (0 ms total)
+
+[----------] 1 test from Pop_back
+[ RUN      ] Pop_back.List
+[       OK ] Pop_back.List (0 ms)
+[----------] 1 test from Pop_back (0 ms total)
+
+[----------] 1 test from Push_front
+[ RUN      ] Push_front.List
+[       OK ] Push_front.List (0 ms)
+[----------] 1 test from Push_front (0 ms total)
+
+[----------] 1 test from Pop_front
+[ RUN      ] Pop_front.List
+[       OK ] Pop_front.List (0 ms)
+[----------] 1 test from Pop_front (0 ms total)
+
+[----------] 1 test from Insert
+[ RUN      ] Insert.List
+[       OK ] Insert.List (0 ms)
+[----------] 1 test from Insert (0 ms total)
+
+[----------] 1 test from Erase
+[ RUN      ] Erase.List
+[       OK ] Erase.List (0 ms)
+[----------] 1 test from Erase (0 ms total)
+
+[----------] 1 test from Resize
+[ RUN      ] Resize.List
+[       OK ] Resize.List (1 ms)
+[----------] 1 test from Resize (1 ms total)
+
+[----------] 1 test from Clear
+[ RUN      ] Clear.List
+[       OK ] Clear.List (0 ms)
+[----------] 1 test from Clear (0 ms total)
+
+[----------] 1 test from Splise
+[ RUN      ] Splise.List
+[       OK ] Splise.List (0 ms)
+[----------] 1 test from Splise (0 ms total)
+
+[----------] 1 test from Remove
+[ RUN      ] Remove.List
+[       OK ] Remove.List (0 ms)
+[----------] 1 test from Remove (0 ms total)
+
+[----------] 1 test from RemoveIf
+[ RUN      ] RemoveIf.List
+[       OK ] RemoveIf.List (0 ms)
+[----------] 1 test from RemoveIf (0 ms total)
+
+[----------] 1 test from Unique
+[ RUN      ] Unique.List
+[       OK ] Unique.List (0 ms)
+[----------] 1 test from Unique (0 ms total)
+
+[----------] 1 test from Merge
+[ RUN      ] Merge.List
+[       OK ] Merge.List (0 ms)
+[----------] 1 test from Merge (0 ms total)
+
+[----------] 1 test from Sort
+[ RUN      ] Sort.List
+[       OK ] Sort.List (0 ms)
+[----------] 1 test from Sort (0 ms total)
+
+[----------] 1 test from Reverse
+[ RUN      ] Reverse.List
+[       OK ] Reverse.List (0 ms)
+[----------] 1 test from Reverse (0 ms total)
+
+[----------] 1 test from SwapLists
+[ RUN      ] SwapLists.List
+[       OK ] SwapLists.List (0 ms)
+[----------] 1 test from SwapLists (0 ms total)
+
+[----------] 1 test from RelationalOperators
+[ RUN      ] RelationalOperators.List
+[       OK ] RelationalOperators.List (0 ms)
+[----------] 1 test from RelationalOperators (0 ms total)
+
+[----------] 1 test from Iterator
+[ RUN      ] Iterator.List
+[       OK ] Iterator.List (0 ms)
+[----------] 1 test from Iterator (0 ms total)
+
+[----------] 1 test from ConstIterator
+[ RUN      ] ConstIterator.List
+[       OK ] ConstIterator.List (0 ms)
+[----------] 1 test from ConstIterator (0 ms total)
+
+[----------] 1 test from ReverseIterator
+[ RUN      ] ReverseIterator.List
+[       OK ] ReverseIterator.List (0 ms)
+[----------] 1 test from ReverseIterator (0 ms total)
+
+[----------] 1 test from ConstReverseIterator
+[ RUN      ] ConstReverseIterator.List
+[       OK ] ConstReverseIterator.List (0 ms)
+[----------] 1 test from ConstReverseIterator (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 32 tests from 32 test cases ran. (1 ms total)
+[  PASSED  ] 32 tests.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"runList" end time: Jun 08 14:14 MSK
+"runList" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: runStack
+3/5 Test: runStack
+Command: "/Users/skarry/Desktop/containers/cmake-build-debug/runStack"
+Directory: /Users/skarry/Desktop/containers/cmake-build-debug
+"runStack" start time: Jun 08 14:14 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/skarry/Desktop/containers/google_test/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from Constructor
+[ RUN      ] Constructor.Stack
+[       OK ] Constructor.Stack (0 ms)
+[----------] 1 test from Constructor (0 ms total)
+
+[----------] 1 test from Top
+[ RUN      ] Top.Stack
+[       OK ] Top.Stack (0 ms)
+[----------] 1 test from Top (0 ms total)
+
+[----------] 1 test from Pop
+[ RUN      ] Pop.Stack
+[       OK ] Pop.Stack (0 ms)
+[----------] 1 test from Pop (0 ms total)
+
+[----------] 1 test from RelationalOperators
+[ RUN      ] RelationalOperators.Stack
+[       OK ] RelationalOperators.Stack (0 ms)
+[----------] 1 test from RelationalOperators (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 4 test cases ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"runStack" end time: Jun 08 14:14 MSK
+"runStack" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: runQueue
+4/5 Test: runQueue
+Command: "/Users/skarry/Desktop/containers/cmake-build-debug/runQueue"
+Directory: /Users/skarry/Desktop/containers/cmake-build-debug
+"runQueue" start time: Jun 08 14:14 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/skarry/Desktop/containers/google_test/googletest/src/gtest_main.cc
+[==========] Running 4 tests from 4 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from Constructor
+[ RUN      ] Constructor.Queue
+[       OK ] Constructor.Queue (0 ms)
+[----------] 1 test from Constructor (0 ms total)
+
+[----------] 1 test from FrontBack
+[ RUN      ] FrontBack.Queue
+[       OK ] FrontBack.Queue (0 ms)
+[----------] 1 test from FrontBack (0 ms total)
+
+[----------] 1 test from Pop
+[ RUN      ] Pop.Queue
+[       OK ] Pop.Queue (0 ms)
+[----------] 1 test from Pop (0 ms total)
+
+[----------] 1 test from RelationalOperators
+[ RUN      ] RelationalOperators.Queue
+[       OK ] RelationalOperators.Queue (0 ms)
+[----------] 1 test from RelationalOperators (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 4 test cases ran. (0 ms total)
+[  PASSED  ] 4 tests.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"runQueue" end time: Jun 08 14:14 MSK
+"runQueue" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: runMap
+5/5 Test: runMap
+Command: "/Users/skarry/Desktop/containers/cmake-build-debug/runMap"
+Directory: /Users/skarry/Desktop/containers/cmake-build-debug
+"runMap" start time: Jun 08 14:14 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/skarry/Desktop/containers/google_test/googletest/src/gtest_main.cc
+[==========] Running 20 tests from 20 test cases.
+[----------] Global test environment set-up.
+[----------] 1 test from Constructors
+[ RUN      ] Constructors.Map
+[       OK ] Constructors.Map (0 ms)
+[----------] 1 test from Constructors (0 ms total)
+
+[----------] 1 test from AsignationOperator
+[ RUN      ] AsignationOperator.Map
+[       OK ] AsignationOperator.Map (1 ms)
+[----------] 1 test from AsignationOperator (1 ms total)
+
+[----------] 1 test from Empty
+[ RUN      ] Empty.Map
+[       OK ] Empty.Map (0 ms)
+[----------] 1 test from Empty (0 ms total)
+
+[----------] 1 test from Max_size
+[ RUN      ] Max_size.Map
+[       OK ] Max_size.Map (0 ms)
+[----------] 1 test from Max_size (0 ms total)
+
+[----------] 1 test from SquareBrackets
+[ RUN      ] SquareBrackets.Map
+[       OK ] SquareBrackets.Map (0 ms)
+[----------] 1 test from SquareBrackets (0 ms total)
+
+[----------] 1 test from Insert
+[ RUN      ] Insert.Map
+[       OK ] Insert.Map (0 ms)
+[----------] 1 test from Insert (0 ms total)
+
+[----------] 1 test from InsertPosition
+[ RUN      ] InsertPosition.Map
+[       OK ] InsertPosition.Map (0 ms)
+[----------] 1 test from InsertPosition (0 ms total)
+
+[----------] 1 test from Swap
+[ RUN      ] Swap.Map
+[       OK ] Swap.Map (0 ms)
+[----------] 1 test from Swap (0 ms total)
+
+[----------] 1 test from Clear
+[ RUN      ] Clear.Map
+[       OK ] Clear.Map (0 ms)
+[----------] 1 test from Clear (0 ms total)
+
+[----------] 1 test from Key_comp
+[ RUN      ] Key_comp.Map
+[       OK ] Key_comp.Map (0 ms)
+[----------] 1 test from Key_comp (0 ms total)
+
+[----------] 1 test from Value_comp
+[ RUN      ] Value_comp.Map
+[       OK ] Value_comp.Map (0 ms)
+[----------] 1 test from Value_comp (0 ms total)
+
+[----------] 1 test from Find
+[ RUN      ] Find.Map
+[       OK ] Find.Map (0 ms)
+[----------] 1 test from Find (0 ms total)
+
+[----------] 1 test from Count
+[ RUN      ] Count.Map
+[       OK ] Count.Map (0 ms)
+[----------] 1 test from Count (0 ms total)
+
+[----------] 1 test from Lower_Upper_bound
+[ RUN      ] Lower_Upper_bound.Map
+[       OK ] Lower_Upper_bound.Map (0 ms)
+[----------] 1 test from Lower_Upper_bound (0 ms total)
+
+[----------] 1 test from Equal_range
+[ RUN      ] Equal_range.Map
+[       OK ] Equal_range.Map (0 ms)
+[----------] 1 test from Equal_range (0 ms total)
+
+[----------] 1 test from Erase
+[ RUN      ] Erase.Map
+[       OK ] Erase.Map (0 ms)
+[----------] 1 test from Erase (0 ms total)
+
+[----------] 1 test from Iterator
+[ RUN      ] Iterator.Map
+[       OK ] Iterator.Map (0 ms)
+[----------] 1 test from Iterator (0 ms total)
+
+[----------] 1 test from ConstIterator
+[ RUN      ] ConstIterator.Map
+[       OK ] ConstIterator.Map (0 ms)
+[----------] 1 test from ConstIterator (0 ms total)
+
+[----------] 1 test from ReverseIterator
+[ RUN      ] ReverseIterator.Map
+[       OK ] ReverseIterator.Map (0 ms)
+[----------] 1 test from ReverseIterator (0 ms total)
+
+[----------] 1 test from ConstReverseIterator
+[ RUN      ] ConstReverseIterator.Map
+[       OK ] ConstReverseIterator.Map (0 ms)
+[----------] 1 test from ConstReverseIterator (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 20 tests from 20 test cases ran. (1 ms total)
+[  PASSED  ] 20 tests.
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"runMap" end time: Jun 08 14:14 MSK
+"runMap" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 08 14:14 MSK
